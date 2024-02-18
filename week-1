@@ -1,0 +1,52 @@
+
+"Introduction to Programming"
+
+Learn: 
+role of programming,
+instructions via a programming language, &
+role of javascript.
+
+Jane's list:
+buy groceries
+  obtain data from product barcodes
+  collate financial info; cash register data
+track heart rate during exercise :
+  smartwatch tracks heartbeat; is synced to social fitness app
+buy flowers :
+  orders flowers online
+
+all of these tasks involves computer programs
+computer program--a series of instructions that tell a 
+computer what to do in specific circumstances and perform a task
+
+programming language--used to control computer programs; a bridge that facilitates communication between computers and people
+
+for a computer to understand programming language, it needs to be stored in RAM--random access memory on a disk in binary code---representation of machine language in 0s and 1s; these 0s and 1s represent electric switches 
+
+a computer's CPU--central processing unit--can comprehend binary and update itself accordingly
+
+low level languages--closer to being understood by a computer's CPU
+high level languages--ex: javascript languages that must be converted to binary code so that a CPU can work with them
+
+______________________________________________________________________
+
+"Why Javascript"
+
+javascript makes interactivity possible, it builds interactivity into webpages, every website uses it, can be used for front-end and back-end development
+
+ex of uses : interactive maps
+
+the only computer language that allows direct interaction with webpages dynamically on the client-side
+
+it's popularity is back to the rules of backwards compatiblity--all websites built in the past still need to work today--without JavaScript much of the Internet becomes useless
+
+ease-of-use: JavaScript has built-in tools, every browser has a built in Javascript engine 
+
+used widely: Javascript is used in almost every website; used as plain JavaSCript, in JavaScript Frameworks (ex: React), and used by servers Node.js
+
+accessible and comes with a web development community, good for new developers
+
+careers: JavaScript skills are high in demand
+
+
+

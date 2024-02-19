@@ -27,8 +27,9 @@ a computer's CPU--central processing unit--can comprehend binary and update itse
 
 low level languages--closer to being understood by a computer's CPU
 high level languages--ex: javascript languages that must be converted to binary code so that a CPU can work with them
+ex: Javascript
 
-______________________________________________________________________
+_____________________________________________________________________
 
 "Why Javascript"
 
@@ -47,6 +48,60 @@ used widely: Javascript is used in almost every website; used as plain JavaSCrip
 accessible and comes with a web development community, good for new developers
 
 careers: JavaScript skills are high in demand
+
+_____________________________________________________________________
+
+"Programming in Javascript"
+
+browser vendors -- companies that build browsers ca. early 2000s
+with these different browsers came different discrepancies between other browsers, developers had to write separate code for separate browsers, several projects tried to solve these compatibility problems 
+
+jquery solved this problem
+jquery--library that users could import to write code, this code worked across all browsers
+
+React--came out in 2011
+solved many issues in creating, updating, and maintaining complex websites
+
+legacy code--old code found on the web, ex: jquery code you come across in an actively running project
+
+_____________________________________________________________________
+
+"Writing your first Javascript code"
+
+comments, 2 types:
+single-line: //this is a single-line comment
+multi-line: 
+/*this
+is
+a
+multi-line
+comment
+*/
+& 
+/*this is a multi-line comment on a single line */
+
+semi-colon
+used to clearly delimit parts of code from other parts of code
+ASI (automatic semi-colon insertion) usually takes care of this for you, inputting semi-colons while writing JavaScript is optional
+
+using developer tools in browser
+how to access developer tools : right click, click inspect
+you can type JS command into Devtools console
+if you need multiple lines of code before you run them, press shift + enter shortcut key to get onto the next line
+
+console.log ("Hello, World")
+output: Hello, World
+console.log("%cHello, World", "color: blue; font-size: 40px")
+output: Hello, World (stylized in blue with a font size of 40px)
+console.log("%c...", "...")
+            text   ,  style
+
+concatenation operator-- a plus symbol, + used to join pieces of text, or addition between numbers
+console.log("Hello " + "there, " + "World")
+is the same as
+console.log("Hello ", "there, ", "World")
+commas are after quotation marks, unless the text to be written includes a comma
+when using +, include spaces within quotations to make sure they're included in output (not necessary when using commas)
 
 
 

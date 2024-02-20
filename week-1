@@ -102,6 +102,53 @@ is the same as
 console.log("Hello ", "there, ", "World")
 commas are after quotation marks, unless the text to be written includes a comma
 when using +, include spaces within quotations to make sure they're included in output (not necessary when using commas)
+_____________________________________________________________________
+
+"Variables"
+
+underlying structure that allows you to write JavaScript
+variable declaration
+variable assignment
+reassigning variables value
+
+"name" : enters a name
+using JS to greet a user without typing it in yourself 
+by using a variable, you can save the name in the variable and reuse it in the future
+
+variable declaration:
+var person;
+
+create a person variable with an assignment operator, = :
+var person = "John"
+
+check variable:
+person;
+>John
+
+Use JS to output "Hello John" automatically:
+console.log("Hello", person);
+>Hello, John
+inside parentheses, insert one or more values separated by commas
+
+create a greeting variable
+var greeting = "Hello"
+
+console.log(greeting, person)
+>Hello John
+
+why variable are useful:
+they can be reassigned with different values
+the same code can be used to get different results
+
+single quotes can also be used, 
+however double quotes are used when including items in single quotes
+a concatenation symbol can also be used :
+console.log ("My pet dog's name is:" + petDog)
+
+
+
+
+
 
 
 

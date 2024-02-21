@@ -147,6 +147,118 @@ however double quotes are used when including items in single quotes
 a concatenation symbol can also be used :
 ex: console.log ("My pet dog's name is:" + petDog)
 
+_____________________________________________________________________
+
+DATA TYPES 
+
+coding efficiently involves knowing when to use different data types
+
+data--the values or information within an app
+
+7 primitive data types:
+string
+number
+boolean
+null
+undefined
+bigint
+symbol
+
+strings and numbers:
+names and descriptions are text values, or string data types
+prices are numerical values, or number data type
+
+different rules apply to making a string of numbers or texts 
+
+numbers:
+//numbers
+375
+
+strings:
+//string
+"Hello World"
+
+number data types has a limited range of values
+string data types have an unlimited range of values
+
+boolean:
+2 values: true and false
+useful for making decisions
+
+null:
+1 value, null, representing absence of value
+
+undefined:
+1 value, undefined, represents a variable not yet assigned a value
+
+bigint:
+big integer
+a data type that accomadates a greater range of numbers than the number data type
+
+symbol:
+a data type used as a unique identifier
+
+_____________________________________________________________________
+
+OPERATORS
+
+operators are used to perform operations on variables an dvalues
+operators are used to manipulate individual data items and return a result
+
+ex: assignment operator, =
+
+learn about:
+assignment operators : arithmetic, comparison
+logical operators
+
+arithmetic operators : 
+addition, +
+subtraction, -
+division /
+multiplication *
+
+comparison operators:
+compares and returns a logical value based on whether comparison is true
+greater than, >
+less than, <
+equal to, == (single = is used for assignment operator)
+not equal to, !=
+
+logical operators:
+used to determine whether something is true or false
+
+and operator, && : checks for both conditions to be true
+ex : a>5 && a<10
+
+or operator, || : checks for at least one condition to be true
+ex : a>5 || a>10
+
+not operator, ! : returns false if the result is true
+ex : !(a>5) 
+
+operators are used to control the flow of a program
+
+console.log (2+2);
+> 4
+
+console.log (2<3);
+> true
+
+console.log (2>3);
+> false
+
+console.log (10==10);
+> true
+
+_____________________________________________________________________
+
+
+
+
+
+
+
+
 
 
 

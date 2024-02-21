@@ -1,75 +1,67 @@
 
-"Introduction to Programming"
+"INTRODUCTION TO PROGRAMMING"
 
 Learn: 
 role of programming,
 instructions via a programming language, &
 role of javascript.
 
-Jane's list:
-buy groceries
-  obtain data from product barcodes
-  collate financial info; cash register data
-track heart rate during exercise :
-  smartwatch tracks heartbeat; is synced to social fitness app
-buy flowers :
-  orders flowers online
-
-all of these tasks involves computer programs
-computer program--a series of instructions that tell a 
-computer what to do in specific circumstances and perform a task
+computer program--a series of instructions that tell a computer what to do in specific circumstances and perform a task
 
 programming language--used to control computer programs; a bridge that facilitates communication between computers and people
 
-for a computer to understand programming language, it needs to be stored in RAM--random access memory on a disk in binary code---representation of machine language in 0s and 1s; these 0s and 1s represent electric switches 
+for a computer to understand programming language, it needs to be stored in RAM--random access memory on a disk in 
+binary code---representation of machine language in 0s and 1s; these 0s and 1s represent electric switches 
 
 a computer's CPU--central processing unit--can comprehend binary and update itself accordingly
 
 low level languages--closer to being understood by a computer's CPU
+
 high level languages--ex: javascript languages that must be converted to binary code so that a CPU can work with them
 ex: Javascript
 
 _____________________________________________________________________
 
-"Why Javascript"
+"WHY JAVASCRIPT"
 
-javascript makes interactivity possible, it builds interactivity into webpages, every website uses it, can be used for front-end and back-end development
+javascript makes interactivity possible, can be used for front-end and back-end development
 
-ex of uses : interactive maps
+javascript is the only computer language that allows direct interaction with webpages dynamically on the client-side
 
-the only computer language that allows direct interaction with webpages dynamically on the client-side
+backwards compatiblity--all websites built in the past still need to work today--without JavaScript much of the Internet becomes useless
 
-it's popularity is back to the rules of backwards compatiblity--all websites built in the past still need to work today--without JavaScript much of the Internet becomes useless
+its ease-of-use: JavaScript has built-in tools, every browser has a built in Javascript engine 
 
-ease-of-use: JavaScript has built-in tools, every browser has a built in Javascript engine 
+it's used widely: Javascript is used in almost every website; used as plain JavaSCript, in JavaScript Frameworks (ex: React), and used by servers Node.js
 
-used widely: Javascript is used in almost every website; used as plain JavaSCript, in JavaScript Frameworks (ex: React), and used by servers Node.js
-
-accessible and comes with a web development community, good for new developers
+its accessible and comes with a web development community, good for new developers
 
 careers: JavaScript skills are high in demand
 
 _____________________________________________________________________
 
-"Programming in Javascript"
+"PROGRAMMING IN JAVASCRIPT"
 
-browser vendors -- companies that build browsers ca. early 2000s
-with these different browsers came different discrepancies between other browsers, developers had to write separate code for separate browsers, several projects tried to solve these compatibility problems 
+browser vendors -- companies that build browsers, popular ca. early 2000s
+with these different browsers came different discrepancies between other browsers
+developers had to write separate code for separate browsers, which led to compatibility issues
+several projects tried to solve these compatibility issues 
 
 jquery solved this problem
 jquery--library that users could import to write code, this code worked across all browsers
 
-React--came out in 2011
-solved many issues in creating, updating, and maintaining complex websites
+React (2011) solved many issues in creating, updating, and maintaining complex websites
 
 legacy code--old code found on the web, ex: jquery code you come across in an actively running project
 
 _____________________________________________________________________
 
-"Writing your first Javascript code"
+"WRITING YOUR FIRST JAVASCRIPT CODE"
 
 comments, 2 types:
+
 single-line: //this is a single-line comment
+
 multi-line: 
 /*this
 is
@@ -80,50 +72,57 @@ comment
 & 
 /*this is a multi-line comment on a single line */
 
-semi-colon
+semi-colon ;
 used to clearly delimit parts of code from other parts of code
-ASI (automatic semi-colon insertion) usually takes care of this for you, inputting semi-colons while writing JavaScript is optional
+ASI (automatic semi-colon insertion) usually takes care of this for you
 
 using developer tools in browser
 how to access developer tools : right click, click inspect
-you can type JS command into Devtools console
-if you need multiple lines of code before you run them, press shift + enter shortcut key to get onto the next line
+you can type JS command into Devtools console section
+if you need multiple lines of code before you run them, press shift + enter to get onto the next line
 
 console.log ("Hello, World")
 output: Hello, World
+
 console.log("%cHello, World", "color: blue; font-size: 40px")
 output: Hello, World (stylized in blue with a font size of 40px)
+
+format :
 console.log("%c...", "...")
             text   ,  style
 
-concatenation operator-- a plus symbol, + used to join pieces of text, or addition between numbers
+concatenation operator-- + , a plus symbol used to join pieces of text, or execute addition between numbers
+
 console.log("Hello " + "there, " + "World")
 is the same as
 console.log("Hello ", "there, ", "World")
-commas are after quotation marks, unless the text to be written includes a comma
-when using +, include spaces within quotations to make sure they're included in output (not necessary when using commas)
+
+commas are included after quotation marks
 _____________________________________________________________________
 
-"Variables"
+"VARIABLES"
 
 underlying structure that allows you to write JavaScript
+
+learning:
 variable declaration
 variable assignment
-reassigning variables value
+reassigning variable values
+
+by using a variable, you can save the name in the variable and reuse it in the future
 
 "name" : enters a name
-using JS to greet a user without typing it in yourself 
-by using a variable, you can save the name in the variable and reuse it in the future
 
 variable declaration:
 var person;
+include semicolon after declaration
 
 create a person variable with an assignment operator, = :
 var person = "John"
 
 check variable:
 person;
->John
+output >John
 
 Use JS to output "Hello John" automatically:
 console.log("Hello", person);
@@ -136,14 +135,17 @@ var greeting = "Hello"
 console.log(greeting, person)
 >Hello John
 
-why variable are useful:
+variable declaration :
+var ... = "..."
+
+why variables are useful:
 they can be reassigned with different values
 the same code can be used to get different results
 
-single quotes can also be used, 
+single quotes can also be used inside parentheses 
 however double quotes are used when including items in single quotes
 a concatenation symbol can also be used :
-console.log ("My pet dog's name is:" + petDog)
+ex: console.log ("My pet dog's name is:" + petDog)
 
 
 

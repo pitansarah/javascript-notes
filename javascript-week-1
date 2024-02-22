@@ -252,6 +252,84 @@ console.log (10==10);
 
 _____________________________________________________________________
 
+NUMBERS
+
+numbers represent both integers and decimals
+
+** represents exponentiation
+10**2
+>100
+
+% represents the remainder after division
+9%8 
+>1
+16%8 
+>0
+
+() controls the order of calculations
+2*4+8
+>16
+while
+2*(4+8)
+>24
+
+*see additional reading:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+
+MDN, References, "Expressions and operators"
+
+? this: 
+refers to an object, depending on how this is being invoked
+in a function context: this refers to object that the function is accessed on
+ex: if function call is in the form obj.f(), then this refers to obj
+...
+
+*see :
+https://www.w3schools.com/js/js_this.asp
+https://www.youtube.com/watch?v=eOI9GzMfd24 
+part of freeCodeCamp's "JavaSCript Basics Course: https://www.youtube.com/playlist?list=PLWKjhJtqVAbk2qRZtWSzCIN38JC_NdhW5
+
+_____________________________________________________________________
+
+STRINGS
+
+strings are used to represent and work with a series of characters in JS
+strings are a collection of characters enclosed in single or double quotes
+'' or "": empty strings
+strings cannot break onto the next line
+delimiters--quotation marks around strings 
+apostrophes are interpreted as delimiters
+this can be resolved by enclosing single quotation marks with double quotation marks
+ex:
+'It's a lovely day'
+>Uncaught SyntaxError: Unexpected identifier
+"It's a lovely day"
+>"It's a lovely day"
+string literal--the value inside of delimiters
+in "123" the string literal is 123
+
+_____________________________________________________________________
+
+BOOLEANS
+
+boolean data types are used used to check if a statement is true or false
+
+strict equality operator, unlike equality operator (==) checks for equality of value and type
+100 == "100"
+>true
+while
+100 === "100"
+>false
+because the number 100 is not the same type as the string "100"
+
+
+
+
+
+
+
+
 
 
 

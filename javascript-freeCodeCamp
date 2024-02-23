@@ -1,0 +1,69 @@
+JavaScript Basics Course (freeCodeCamp)
+
+  
+
+VARIABLES
+to use a variable first declare it:
+var myName;
+
+next initialize the value:
+myName = "Sarah";
+
+next run the variable through the console:
+console.log("My name is" + myName);
+>My name is Sarah
+
+to reassign value:
+myName = "Cindy";
+
+you cannot start variables with underscores or numbers
+in multi-word variables you should capitalize every word after the first word, without spaces
+you should not name variables after words that compose JS syntax, like var
+variables are case sensitive
+
+JS is a loosely typed language, meaning that you do not have to specify what data type you're using
+
+
+_______________
+
+DATA TYPES
+
+symbols: data types whose instances are unique and immutable
+immutable-- cannot be altered once it is created
+how are different symbols with the same name not strictly equal?
+
+objects: a collection of properties
+properties: an association between a name or a key and a value
+var myCar = new Object();
+myCar.make = "Ford";
+myCar.model = "Mustang";
+console.log(myCar.make);
+>Ford
+
+_______________
+
+NUMBERS
+
+number++; adds one to a previous number
+if ++ comes before number (++number) then number is incremented before it's logged
+number--; minuses one to a previous number
++= : result is the number plus a number
+ex: number = number + 5 can be written as
+number += 5
+also *=, /=
+
+_______________
+
+STRING BASICS
+a string is a series of characters enclosed in single or double quotes
+  
+a backslash escapes the quotations of a string so the console knows you're not invoking a new string
+ex : "He said \"Hi!"\";
+\' single quote
+\" double quote
+\\ backslash
+\n new line
+\r carriage rwturn
+\t tab
+\b backspaces
+\f form feed

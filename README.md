@@ -1,6 +1,6 @@
 <p> 
   Notes on Javascript from :
-  <ol>
+  <ul>
     <li>Meta's Front-End Web Development course on Coursera</li>
     <li>freeCodeCamp</li>
     <li>learnwithleon / 100Devs</li>

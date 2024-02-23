@@ -1,6 +1,10 @@
-Notes on Javascript from :
-Meta's Front-End Web Development course on Coursera 
-freeCodeCamp 
-learnwithleon / 100Devs
-Mozilla Developer Network
-World Wide Web Consortium 
+<p> 
+  Notes on Javascript from :
+  <ol>
+    <li>Meta's Front-End Web Development course on Coursera</li>
+    <li>freeCodeCamp</li>
+    <li>learnwithleon / 100Devs</li>
+    <li>Mozilla Developer Network</li>
+    <li>World Wide Web Consortium</li>
+  </ol>
+</p>

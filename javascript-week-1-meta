@@ -1,3 +1,4 @@
+Meta / Coursera
 
 "INTRODUCTION TO PROGRAMMING"
 
@@ -279,16 +280,10 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Oper
 
 MDN, References, "Expressions and operators"
 
-? this: 
+??? this: 
 refers to an object, depending on how this is being invoked
 in a function context: this refers to object that the function is accessed on
 ex: if function call is in the form obj.f(), then this refers to obj
-...
-
-*see :
-https://www.w3schools.com/js/js_this.asp
-https://www.youtube.com/watch?v=eOI9GzMfd24 
-part of freeCodeCamp's "JavaSCript Basics Course: https://www.youtube.com/playlist?list=PLWKjhJtqVAbk2qRZtWSzCIN38JC_NdhW5
 
 _____________________________________________________________________
 

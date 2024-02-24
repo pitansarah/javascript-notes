@@ -318,6 +318,24 @@ while
 >false
 because the number 100 is not the same type as the string "100"
 
+_____________________________________________________________________
+
+OPERATORS IN DEPTH
+
+logical and operator : &&
+
+            
+
+logical or operator : ||
+logical not operator : !
+modulus operator : %
+equality operator : ==
+strict equality operator : ===
+inequality operator : !=
+strict inequality operator : !==
+addition assignment and concatenation assignment operator : +=
+
+
 
 
 

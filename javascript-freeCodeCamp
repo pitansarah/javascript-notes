@@ -1,6 +1,174 @@
-JavaScript Basics Course (freeCodeCamp)
 
-  
+Learn Javascript - Full Course for Beginners (freeCodeCamp)
+
+Storing Values with the Assignment Operator :
+
+var : can change (be reassigned)
+let : can be referred to within a specific context
+const : must not change
+
+__________________
+
+decimals :
+
+decimals are also referred to as 40-point numbers
+
+__________________
+
+escaping literal quotes :
+
+using literal quotes inside Js Code
+use a \ (backslash) before every literal quotation you are using
+
+ex: var myStr = "\"Hi!\" she said"
+
+when using double quotes inside of a string start and end strung with single quotes
+
+ex : var myStr = 'a href = "a-website.com"'
+
+if you want to use single and double quotes inside a string use backticks ` to start and end string
+
+__________________
+
+string immutability :
+
+var myStr = "Jello world"; /* change J */
+
+this won't work :
+myStr[0] = "H";
+
+this will work :
+var myStr = "Hello world";
+
+__________________
+
+arrays :
+
+arrays are where you can store different pieces of data together
+
+var ourArray = ["John", 23]
+
+you can nest arrays within arrays within another set of ssquare brackets, separating nested arrays with commas
+
+var ourArray = [["the universe", 42], ["everything", 101010]]
+
+you can access data in arrays by using bracket notation, more than one index value refers to data retrieved from nested arrays
+
+var myData = ourArray[0] [1];
+> 42
+
+you can modify array data
+var ourArray = [1, 2, 3];
+ourArray [1] = 4;
+this changes the array to
+[1,4,3]
+
+__________________
+
+push ():
+
+manipulate arrays by adding data into an array
+
+ourArray = [1, 2, 3];
+ourArray push([4, 5, 6]);
+ourArray = [1, 2, 3 [4, 5, 6]]
+
+__________________
+
+pop():
+
+this function removes the last element from an array
+
+var ourArray = [1, 2, 3];
+var removedFromOurArray = ourArray pop();
+> 3
+console.log(myArray);
+> [1, 2]
+
+__________________
+
+shift():
+
+this function removes the first element from an array
+
+var ourArray = [1, 2, 3];
+var removedFromOurArray = ourArray.shift():
+> 1
+console.log(OurArray);
+> [2,3]
+
+__________________
+
+unshift()
+
+this function adds an element to the beginning an array
+
+var ourArray = [1, 2, 3];
+//ourArray shift() = [1, 2]//
+
+ourArray unshift(4);
+//ourArray = [4, 1, 2]//
+
+__________________
+
+functions :
+
+function ourReusableFunction() {
+console.log("Hello, World");
+}
+
+ourReusableFunction();
+> Hello, World
+
+__________________
+
+arguments :
+
+parameters--variables that act as placeholders for the values to be input to a function when it is called
+
+function ourFunctionWithArgs (a, b) {
+console.log(a-b);
+}
+the parameters are a and b
+
+ourFunctionWithArgs (10,5);
+
+//console.log outputs 5//
+
+__________________
+
+global and scope functions :
+
+scope--the visibility of variables
+
+variables which are defined outside of a function have global scope; they can be seen anywhere in code
+
+__________________
+
+STRINGS : BRACKET NOTATION
+
+zero-based indexing: starting counting from 0, like computers do
+
+var firstName = Sarah;
+console.log(firstName[0]);
+>S
+
+get the last character:
+console.log(firstName[firstName.length - 1]);
+>h
+
+get the second to last character:
+console.log(firstName[firstName.length - 2]);
+>a
+
+you can't alter the letters in the string once a string has been created, but you can assign a new variable
+
+
+
+********************************************************************
+
+JavaScript Basics Course (freeCodeCamp)
+https://www.youtube.com/watch?v=le-URjBhevE&list=PLWKjhJtqVAbk2qRZtWSzCIN38JC_NdhW5
 
 VARIABLES
 to use a variable first declare it:

@@ -323,17 +323,105 @@ _____________________________________________________________________
 OPERATORS IN DEPTH
 
 logical and operator : &&
+            both A && B must be true for statement to be true
+            ex : check if the current time is between 9 and 5
+            var currentTime = 10;
+            console.log (currentTime > 9 && currentTime < 17);
+            > true
+
+logical or operator : ||
+            A or B must be true for statement to be true
+            ex : 
+            var currentTime = 10
+            console.log (currentTime > 9 || currentTime < 17);
+            > true
+
+logical not operator : !
+
+            var petHungry = true;
+            console.log (!petHungry);
+            > false
+
+modulus operator : %
+
+            ex : find out how many people can be seated at a table
+            there are 5 tables, 4 chairs per table
+
+            console.log (22%4) 
+            > 2
+
+            two people are left unseated
+
+equality operator : ==
+
+            5 == 5 // true 
+            5 == 6 // false
+            
+strict equality operator : ===
+
+            compares number and data type
+            5 === 5 // true
+            5 === "5" // false, because the string 5 is not the same as the number 5
+
+inequality operator : !=
+
+            5 != 5 // false
+            5 != "5" // false
+
+strict inequality operator : !==
+
+            5 !== 5 // false
+            5 !== "5" // true
+
+when concatenating strings and numbers, JS coerces the numbers to behave like strings
+the end result is a string value
+ex : 365 + "days" = "365 days"
+ex : 1 + "2" // 12
+
+addition assignment operator : +=
+
+            ex : count the number of overtime hours worked monday through friday
+            var overtime = 1;
+            overtime = +2;
+            overtime = +1;
+            overtime = +2;
+            overtime = +3;
+            console.log (overtime); // 9
+
+concatenation assignment operator : +=
+
+            like addition assignment operator, but with strings, not numbers
+            var longString = "";
+            longString += "Once ";
+            longString += "upon ";
+            longString += "a ";
+            longString += "time ";
+            longString += "... ";
+            console.log(longString);
+            // Once upon a time ...
+
+operator precedence 
+
+            1 * 2 + 3
+            certain operators, like multiplication, have precedence over other operators, like addition
+
+operator associativity 
+
+            https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+
+            left-to-right associativity
+
+            (a + b) + c
+
+
+            right-to-left associativity
+
+            a + (b + c)
+
 
             
 
-logical or operator : ||
-logical not operator : !
-modulus operator : %
-equality operator : ==
-strict equality operator : ===
-inequality operator : !=
-strict inequality operator : !==
-addition assignment and concatenation assignment operator : +=
+            
 
 
 

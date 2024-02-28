@@ -418,13 +418,145 @@ operator associativity
 
             a + (b + c)
 
+_____________________________________________________________________
 
+WRITING STATEMENTS 
+
+we make decisions based on whether certain conditions are true or false
+
+ex : we bring an umbrella outside depending on the weather condition, 
+if it is rainy we bring an umbrella
+
+in JS there are conditional statements using if, and, but    
+
+the if statement executes a code if a condition is true
+            if (condition == true) {
+            //Execute code
+            }
+you can use comparison operators to evaluate the expression (== , > , < , !=)
+
+the if else statement : if a condition is true, do something, if not, do something else
+            if (condition == true) {
+            //Execute code
+            } else {
+            //Execute code
+            }
+ex : a driving test
+a passing grade is greater than 40
+a failing grade is less than 40
+
+            var result = 50;
+            if (result > 40) {
+            console.log("Congratulations you passed.");
+            } else {
+            console.log("Unfortunately you did not pass.");
+            }
+ex : 
+            var food = "hot";
+            if (food == "hot") {
+            console.log('Too hot');
+            } else if (food == "cold") {
+            console.log('Too cold');
+            } else {
+            console.log('Just right');
+            }
+
+_____________________________________________________________________
+
+WORKING WIth CONDITIONAL STATEMENTS (with multiple conditions)
+
+else if and switch statements
+
+ex : 
+            var place = 'first';
+
+            if(place == 'first') {
+            console.log('Gold');
+            } else if (place == 'second') {
+            console.log('Silver');
+            } else if (place == 'third'){
+            console.log('Bronze');
+            } else {
+            console.log('No medal');
+            }
             
+            //Output : Gold
 
-            
+if you have to evaluate many other conditions, use the switch statement
+
+            var place = 'first';
+
+            switch(place) {
+            case 'first':
+                        console.log('Gold');
+                        break;
+            case 'second':
+                        console.log('Silver');
+                        break;
+            case 'third':
+                        console.log('Bronze);
+                        break;
+            default:
+                        console.log('No medal');
+            }
+
+            //Output : Gold
+
+_____________________________________________________________________
+
+CONDITIONAL EXAMPLES
+
+flow control statements: if else and switch; they control the flow of execution of your code
+so that some code is skipped while other code is executed
+
+if else is best for a binary choice in the condition
+
+if, else if, and else can be used with a smaller number of possible outcomes
+you need to check
+
+when there are a lot of possible outcomes you ened to check, use the switch statement
+
+_____________________________________________________________________
+
+PRACTICE CONDITIONAL STATEMENTS
+
+exercise : practice working with if else and switch statements
+
+var age = 10;
+if (age >= 65) {
+            console.log("You get your income from your pension");
+} else if (age <= 65 && age >= 18) {
+            console.log("Each month you get a salary.");
+} else if (age < 18) {
+            console.log ("You get an allowance.");
+} else {
+            console.log ("The value of the age variable is not numerical.");
+}
 
 
+var day = "Sunday"
 
+switch(day) {
+            case 'Monday':
+            console.log("Do something");
+            break;
+            case 'Tuesday':
+            console.log("Do something");
+            break;
+            case 'Wednesday' :
+            console.log("Do something");
+            break;
+            case 'Thursday':
+            console.log("Do something");
+            break;
+            case 'Friday':
+            console.log("Do something");
+            break;
+            case 'Saturday':
+            console.log("Do something");
+            break;
+
+// code unfinished
 
 
 

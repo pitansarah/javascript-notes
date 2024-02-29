@@ -613,13 +613,79 @@ nested loop : a loop inside of a loop
 
 _____________________________________________________________________
 
+FOR LOOP
 
+for loops automate code repetition
 
+code :
 
+declaration, consisting of counter, named i for iterator :
+            this counter's start value must be assigned
+            there must be an end count value, which specifies how many times the loop must run
+            there must be an exit condition works with incrementor to prevent loop from ending forever; i = a value that the code must terminate when this i value is false
+            there must be an incrementor, which increases (i++) or decreases(i--) the value of i by 1 each time the code runs
 
+loop body :
+            enclosed in curly braces
+            specify what code should do once exit condition is met
 
+            ex : 
+            
+                        for (var i = 1; i <= 3; i++) {
+                          console.log(i)
+                        }
+                        console.log('Go')
+           
+            i = 1: the count starts at 1
+            i <=3: the count includes all values equal to or less than 3
+            i++: the count increments by 1
 
+            output :
+            1
+            2
+            3
+            Go
 
+            ex : for (var i = 10; i > 0; i--) {
+              console.log(i)
+            }
+            console.log('Happy New Year!')
+
+            starting at 10 and ending at 1, counting down by incrememnts of 1
+            after 1, "Happy New Year!"
+
+            output : 
+            10
+            9
+            8
+            7 
+            6
+            5
+            4
+            3
+            2
+            1
+            Happy New Year!
+
+_____________________________________________________________________
+
+WHILE LOOP
+
+code that repeats as long as a specified condition is true
+
+counter value is set before the loop and must be clearly defined
+
+            ex: var counter = 3
+
+only need to specify exit condition in parentheses of loop declaration, which gives JS an expression to check
+if this expression returns true, JS will run the code inside the while loop
+
+            ex : while (counter > 0) {
+              console.log(counter);
+              counter = counter - 1;
+            }
+            console.log('Happy New Year!')
+once exit condition is met, any code under the last curly brace will run
 
 
 

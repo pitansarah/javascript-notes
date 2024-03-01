@@ -755,5 +755,20 @@ exercise : you are making cards for children letter blocks A through G to be pre
 i < cubes.length : cubes.length is the total length of the string var cubes, which is ABCDEFG; i must be less than the total length of the string for code to run
 cubes[i] : targets a specific letter in the ABCDEFG string; i = 0 is A
 
+_____________________________________________________________________
+
+TERNARY OPERATOR (MDN)
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#ternary_operator
+
+tests a condition and returns one value if it is true, one value if it is false
+syntax: 
+            condition ? run this code : run this code instead;
+
+ex:
+            const greeting = isBirthday
+            ? "Happy birthday!"
+            : "Good morning!";
+
+
 
 

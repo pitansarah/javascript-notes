@@ -726,6 +726,34 @@ for (var i = 1; i <= 2; i++) {
 
 console log outputs values of i and j to the console
 
+be careful not to nest too many loops, as this slows down code
+
+ex: 
+            for (var year = 2023; var < 2025; year++) {
+              console.log(year);
+                for (var month = 6; var < 9; month++) {
+                  console.log("--------", month);
+                }
+              }
+
+use i and j variables instead of variables like month and year while coding
+
+_____________________________________________________________________
+
+USES of loops
+
+exercise : you are making cards for children letter blocks A through G to be presented on a kid's toy store website
+
+            var cubes = 'ABCDEFG';
+            for (i = 0; i < cubes.length; i++) {
+              var styles = "font-size: 40px; border-radius: 10px; border: 1px solid blue; background: pink; color: purple";
+              console.log("%c", cubes[i], styles)
+            }
+
+%c : converts an argument as css
+- = 0 : i starts off at A or 0 
+i < cubes.length : cubes.length is the total length of the string var cubes, which is ABCDEFG; i must be less than the total length of the string for code to run
+cubes[i] : targets a specific letter in the ABCDEFG string; i = 0 is A
 
 
 

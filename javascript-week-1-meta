@@ -674,8 +674,9 @@ WHILE LOOP
 code that repeats as long as a specified condition is true
 
 counter value is set before the loop and must be clearly defined
+this value is the value at which the counter starts counting
 
-            ex: var counter = 3
+            ex: var counter = 3 or var i = 3
 
 only need to specify exit condition in parentheses of loop declaration, which gives JS an expression to check
 if this expression returns true, JS will run the code inside the while loop
@@ -687,11 +688,43 @@ if this expression returns true, JS will run the code inside the while loop
             console.log('Happy New Year!')
 once exit condition is met, any code under the last curly brace will run
 
+                        OR
+            while (i > 0) {
+            console.log(i);
+            i--;
+            }
+            console.log('Happy New Year!')
 
+_____________________________________________________________________
 
+NESTED LOOPS
 
+used to perform more than one task at the same time
 
+ex :             for (i = 0; i < 2; i++) {
+                        for (j = 1; j <=7; j++) {
+;                        console.log("Week" + i + " day " + j);
+                        }
+                  }
 
+ex : create a two-week plan for Monday through Fridays
+5 days for week 1, 5 days for week 2
+Week 1- day 1
+Week 1- day 2
+Weel 1-day 3
+etc.
+
+outer loop loops over the weeks
+for (var = 1; i <= 2; i++) {
+
+inner loop loops over the days
+
+for (var i = 1; i <= 2; i++) {
+  for (var j = 1; j<=5; j++) {
+  }
+}
+
+console log outputs values of i and j to the console
 
 
 

@@ -1,1 +1,21 @@
+FUNCTIONS
 
+- functions allow you to take code that performs a set of related actions and group them under a single label
+
+- you invoke function to run its code
+
+- exercise : create a function that adds two numbers, a and b, together to create c
+  function addTwoNums() {
+  var a = 5;
+  var b = 10;
+  var c = a + b;
+  console.log(c);
+  } 
+  addTwoNums(); //calls function
+
+- exercise : make addTwoNums() more flexible with the values it accepts
+  function(a,b) { //a and b are parameters
+  var c = a + b;  
+  console.log(c);
+  }
+  addTwoNums(2,2); //2 and 2 are arguments

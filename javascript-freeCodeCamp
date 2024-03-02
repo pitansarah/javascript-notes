@@ -235,3 +235,49 @@ ex : "He said \"Hi!"\";
 \t tab
 \b backspaces
 \f form feed
+
+********************************************************************
+JAVASCRIPT ALGORITHMS AND DATA STRUCTURES (BETA)
+
+- <script src = "./script.js" </script> or 
+  <link href="./styles.css" rel="stylsheet"/> can be used to save separate files
+
+- declare a variable :
+
+  let camperbot;
+
+- initialization: assigning a variable
+
+- declaration and initialization: 
+
+  let age = 32;
+
+- camelCase : the first letter is lower case, and the beginning of all next words is uppercase
+
+- strings can be surrounded with double quotes, single quotes, or backticks
+
+- document.queryselector()
+
+  assigns itself to specific elements in HTML using the DOM 
+  takes a CSS selector and returns the first CSS element that matches that selector
+
+- place <script> element inside body and not the head 
+  this prevents the script from running before browser has finishing reading HTML
+
+- declare constants, which are variable that are not going to be reassigned
+
+  const = 
+
+- margins: 
+
+  ex: 10px 50px 20px /*top, left and right, bottom*/
+  ex: 10px 50px 20px 0 /*top, right, bottom, left*/
+
+- gradients are technically images, use background-image to set them
+
+
+
+
+
+
+

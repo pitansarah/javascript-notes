@@ -19,3 +19,107 @@ FUNCTIONS
   console.log(c);
   }
   addTwoNums(2,2); //2 and 2 are arguments
+
+_________________________________________________
+
+INTRODUCTION TO OBJECTS
+
+- used to group together a collection of related properties belonging to one entity
+
+- use a dot operator to describe variables of the storeManager object
+
+- a variable's name is a property key
+
+- a variable's value is a property value of an object
+
+- an object can also be defined by listing the key value pairs inside the object literal, 
+  which specifies them as comma delimited properties
+
+- list each object property within curly braces, after the assignmnt operator, of an object declaration, 
+  denoting its property keys and values
+
+- ex, object literal syntax: 
+
+  var assistantManager = {
+    movement: 3,
+    socialSkills: 30,
+    streetSmarts: 30,
+    health: 40
+  }
+
+- you can add more properties to an object once its been declared by using dot notation
+
+- ex:
+
+  assistant Manager.nextAchievement = "get promoted";
+
+_________________________________________________
+
+OBJECT LITERALS AND DOT NOTATION 
+
+- to access an object or its individual properties, use console.log
+
+- another way to define an object :
+  save an empty object to a variable,
+  use dot notation to declare new properties of the object,
+  use the assignment operator to add values to the properties of the object
+
+- ex: 
+
+  var house {};
+  house.rooms = 4;
+  house.color = "pink";
+  house.priceUSD = 12345
+
+- you can use this object notation along with the object literal notation to add properties as you go
+
+_________________________________________________
+
+OBJECT LITERAtlS AND BRACKET NOTATION
+
+- declare the object as a variable
+
+- list the property keys of the object in brackets as strings 
+
+- assign property values with the assignment operator
+
+- bracket notation can be used alongside dot notation
+
+- with this notation, you can add spaces inside property keys
+
+- unlike dot notation, bracket notation can evaluate expressions
+
+- ex, bracket notation:
+
+  var house = {};
+  house['rooms'] = 4;
+  house['color'] = 'pink';
+  house['priceUSD'] = 12345;
+
+- ex, evaluating expressions
+
+  var arrOfKeys = ['speed', 'altitude', 'color'];
+  var drone = {
+    speed: 100,
+    altitude: 200,
+    color: red"
+  }
+  for (var i = 0; i < arrOfKeys.length; i++) {
+    console.log(drone[arrofKeys[i]]);
+  }
+
+  /* output : 
+  100
+  200
+  red
+  */
+
+
+
+
+
+
+
+
+  
+

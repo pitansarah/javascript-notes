@@ -275,7 +275,17 @@ JAVASCRIPT ALGORITHMS AND DATA STRUCTURES (BETA)
 
 - gradients are technically images, use background-image to set them
 
+- innerText JS propery controls text thta appears in an HTML element
 
+  ex:
+  //HTML:
+  <p id="info">Demo content</p>
+
+  //JS:
+  const info = document.querySelector(#info);
+  info.innerText = "Hello World";
+
+  result: the Demo Content text is changed to Hello World
 
 
 

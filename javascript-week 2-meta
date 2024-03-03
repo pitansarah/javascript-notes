@@ -113,6 +113,88 @@ OBJECT LITERAtlS AND BRACKET NOTATION
   200
   red
   */
+_________________________________________________
+
+ARRAYS ARE OBJECTS
+
+push():
+  - adds items to the end of an array
+  - ex:
+    var fruits = [];
+    fruits.push("apple);
+    fruits.push("pear"); 
+    //[apple, pear]
+  - ex:
+    var ourArray = [1, 2, 3];
+    ourArray push([4, 5, 6]);
+    console.log(ourArray)
+    // [1, 2, 3, [4, 5, 6]]
+
+pop()
+  - removes the last item from an array
+  - ex:
+    fruits.pop();
+    console.log(fruits); 
+    //[apple]
+
+- you can use return instead of console.log
+
+  ex: 
+  function arrayBuilder(one, two, three){
+    var arr = [];
+    arr.push(one);
+    arr.push(two);
+    arr.push(three);
+    return arr;
+  }
+
+- you can also save the function call to a variable and console.log it
+
+  ex: var simpleArr = arrayBuilder('apple', 'pear', 'plum');
+      console.log(simpleArr); 
+      //['apple', 'pear', 'plum']
+
+_________________________________________________
+
+MATH OBJECT CHEAT SHEET
+
+number constants, built into Math object
+
+  - Math.PI = 3.14159
+  - Math.E (Euler's constant) = 2.718
+  - Math.LN2 (natural logarithm) = 0.693
+
+rounding methods, build into Math object
+
+  - Math.ceil(): rounds up to closest integer
+  - Math.floor(): rounds down to closest integer
+  - Math.round(): rounds up to closest integer if the decimal is .5 or above
+    otherwise rounds down to closest integer
+  - Math.trunc(): trims the decimal, leaving only the integer
+
+arithmetic and calculus method
+
+  - Math.pow(2,3): calculates the number 2 to the power of 3
+  - Math.sqrt(16): calculates the square root of 16
+  - Math.cbrt(8): calculates the cube root of 8
+  - Math.abs(-10): returns the absolute value
+  - logarithmic methods:
+    Math.log()
+    Math.log2()
+    Math.log10()
+  - Math.min(9, 8, 7): returns the minimum value
+  - Math.max(9, 8, 7): returns the maximum value
+  - trigonometric method:
+    Marh.sin()
+    (Math.cos()
+    Math.tan()
+
+_________________________________________________
+  
+MATH OBJECT
+
+- random method: generates a number between 0 and 0.99
+
 
 
 

@@ -248,6 +248,83 @@ console.log(element);
 'jelly' 
 'bread' */
 
+__________________
+
+
+COMMON ARRAY METHODS
+
+- concat() method:
+  concatenates arrays
+
+  ex:
+  
+    var arr1 = [1, 2, 3];
+    var arr2 = [4, 5, 6];
+    console.log(arr1.concat(arr2));
+    //[1, 2, 3, 4, 5, 6]
+
+- join():
+  joins arrays as a single string
+
+    ex: 
+
+      var arr = [1, 2, 3, 4, 5, 6];
+      console.log(arr.join(""));
+      // result: '123456'
+
+    to join the elements in the array with no space ("")
+
+    ex:
+
+      var arr = [1, 2, 3, 4, 5, 6];
+      console.log(arr.join(!));
+      //result: 1!2!3!4!5!6
+
+    to join the elements in the array with a ! between each element
+
+- reverse():
+  reverses the elements in an array
+
+  ex:
+
+    var arr = [1, 2, 3];
+    console.log(arr.reverse());
+    //output: [3, 2, 1]
+
+
+- shift():
+  removes the first element of an array 
+
+  ex:
+  
+    var arr = [1, 2, 3, 4, 5, 6]
+    console.log(arr.shift()); // output: 1
+    console.log(arr); //output: [2, 3, 4, 5, 6]
+
+- unshift():
+  adds new elements to the beginning of an array
+
+  ex:
+
+    var arr = [1, 2, 3, 4, 5, 6];
+    console.log(arr.unshift(0)); 
+    console.log(arr); //output: [0, 1, 2, 3, 4, 5, 6]
+
+- slice():
+  extracts a part of a string
+  
+  ex:
+  
+    var arr = "Hello World";
+    arr.slice(0,5);
+    console.log(arr); //output: "Hello "
+
+  ex: 
+
+    let str = "Hello World";
+    let result = str.slice(3) // slices a smaller string from the string starting at position 3 
+    console.log(arr); //output: "lo World"
+
 ********************************************************************
 
 JavaScript Basics Course (freeCodeCamp)

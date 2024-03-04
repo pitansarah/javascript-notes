@@ -195,9 +195,53 @@ MATH OBJECT
 
 - random method: generates a number between 0 and 0.99
 
+_________________________________________________
 
+A CLOSER LOOK AT STRINGS
 
+- iterable: a data type that can be iterated over using a "for of" loop, ex: arrays, strings
 
+- for loop over arrays 
+
+  ex:  
+    
+    var leters = ['a', 'b', 'c'];
+    
+    for (i = 0; i < letters.length; i++) {
+      console.log(letters[i]);
+    }
+
+- for loop over strings
+
+  ex:   
+  
+    var letters = 'abc';
+  
+    for (i = 0; i < letters.length; i++) {
+      console.log(letters[i]);
+    }
+
+- pop() doesn't work on strings
+
+  ex: 
+
+  var greet = 'Hello';
+
+  console.log(greet(pop)); //leads to an error because strings cannot use pop method
+
+- adding strings is the same as concatenating strings
+
+  ex:
+
+  var greet = 'Hello';
+  var user = 'Lisa';
+
+  console.log(greet.concat(user)); //note the syntax, use dot notation
+  //output: Hello Lisa
+
+  _________________________________________________
+
+STRING CHEAT SHEET
 
 
 

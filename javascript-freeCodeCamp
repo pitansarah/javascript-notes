@@ -163,7 +163,90 @@ console.log(firstName[firstName.length - 2]);
 
 you can't alter the letters in the string once a string has been created, but you can assign a new variable
 
+__________________
 
+FOR IN / FOR OF
+
+for in: 
+
+  (W3)
+  loops through the properties of an object
+  
+  syntax:
+  
+    for (key in object) {
+      //code to be executed
+    }
+  
+  ex:
+  
+    const person = {fname:"John", lname:"Doe", age:25}; //define object
+    let text = ""; // declare variable
+    for (let x in person) { //loop through properties of person
+      text += person[x]; //add properties of person to text
+    }
+
+for of:
+
+  loops through values of an iteral objects, such as arrays, strings, maps
+
+
+__________________
+
+SWITCH STATEMENTS 
+
+syntax:
+
+  switch(expression) {
+    case x:
+    //code to be run;
+    break;
+    case y:
+    //code to be run;
+    break;
+    default:
+    //code to be run;
+  }
+
+__________________
+
+TERNARY OPERATORS 
+
+(MDN)
+also called conditional operator
+are similar in function to if else statements
+takes three operands:
+  the condition,
+  an expression to evaluate if the condition is truthy
+  an expression to evaluate if the condition is falsy
+
+ex: 
+  let age = 19;
+  console.log((age >= 18) ? 'You are an adult' : 'You are a child')
+
+console logs 'You are an adult if age is greater than 18, 
+if not, console logs 'You are a child'
+
+__________________
+
+ARRAYS
+
+arrays are collections of data
+
+var sandwich = ['peanut butter', 'jelly', 'bread'];
+sandwich[1] = 'banana';
+console.log(sandwich);
+//[peanut butter, banana, bread]
+
+foreach():
+calls a function for each element in an array
+
+var sandwich = ['peanut butter', 'jelly', 'bread']
+sandwich.foreach (function(element);
+console.log(element);
+/*'peanut butter' 
+'jelly' 
+'bread' */
 
 ********************************************************************
 
@@ -238,6 +321,7 @@ ex : "He said \"Hi!"\";
 
 ********************************************************************
 JAVASCRIPT ALGORITHMS AND DATA STRUCTURES (BETA)
+DRAGON FIGHTING EXERCISE
 
 - <script src = "./script.js" </script> or 
   <link href="./styles.css" rel="stylsheet"/> can be used to save separate files

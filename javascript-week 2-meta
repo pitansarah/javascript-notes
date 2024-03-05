@@ -243,6 +243,102 @@ A CLOSER LOOK AT STRINGS
 
 STRING CHEAT SHEET
 
+- length property: finds the length of a string; an empty string is length 0
+
+  syntax:
+  string.length
+
+  ex: 
+  var greet = "Hello, ";
+  greet.length; //7
+
+- charAt() method: returns a character at a specified index in a string
+
+  syntax:
+  string.charAt(index);
+
+  ex:
+  var greet = "Hello, ";  
+  greet.charAt(0); //'H'
+
+  ex (get the last letter in a string):
+  var greet = "Hello,";
+  greet.charAt(greet.length - 1); // ","
+
+- concat() method: 
+  joins two or more strings
+  creates a new string
+  doesn't change original string
+
+  syntax:
+  string.concat(string1, string2, ..., stringX);
+
+  ex: 
+  Wo.concat("rl").concat("d"); //"World"
+
+  ex: 
+  var greet = 'Hello ';
+  var place = 'World'
+
+  greet.concat(place); //'Hello World'
+
+- indexOf(): 
+  returns the first occurence of a value in a string 
+  if value not found, returns -1
+  case sensitive
+
+  syntax:
+  string.indexOf(searchvalue, start);
+
+  ex:
+  "ho-ho-ho".indexOf('h'); //0
+  
+  ex:
+  let text = 'ho-ho-ho';
+  text.indexOf('h', 2); //3
+
+  ex:
+  let greet = "Hello World, welcome to the Universe.";
+  greet.indexOf('welcome'); //13
+
+- lastIndexof():
+  finds the last instance of a value in a string
+  works similarly to indexOf()
+
+- split():
+  splits a string into an array of substrings
+  returns a new array
+  does not alter the original string
+  if " " is used as a separator, split(" ") splits in between words
+
+  syntax:
+  string.split(separator, limit)
+
+  ex:
+  "ho-ho-ho".split('-'); //['ho', 'ho', 'ho']
+
+  ex:
+  let text = "How are you doing today?" 
+  const myArray = split.text(" "); // ['How', 'are', 'you', 'doing', 'today?']
+  let word = myArray[1]; // 'are'
+
+  ex:
+  let text = "How are you doing today?"
+  const myArray = split.text(' ', 3); // ['How', 'are', 'you'], array is limited to 3 words
+
+- .toUpperCase & .toLowerCase:
+  changes the case of the values in a string
+  
+  ex:
+  let greet = "Hello";
+  greet.toUpperCase; //"HELLO"
+  greet.toLowerCase; //"hello"
+
+  
+  
+  
+
+
 
 
 

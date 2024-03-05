@@ -49,7 +49,7 @@ Learn JavaScript Loops! Free Software Engineering Bootcamp! (class 16)
   used without parentheses,
   returns a value to a specific place
 
-- exercise: create a function that multiplies three numbers and returns the product
+EXERCISES:
 
   function timesThree = (a, b, c) {
     console.log(a * b * c);

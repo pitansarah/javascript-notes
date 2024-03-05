@@ -334,8 +334,62 @@ STRING CHEAT SHEET
   greet.toUpperCase; //"HELLO"
   greet.toLowerCase; //"hello"
 
-  
-  
+  _________________________________________________
+
+OBJECT METHOD
+
+- an object's properties are referred to as key-value pairs
+
+- you can assign key-values to an object using dot notation and the assignment operator
+
+- ex:
+
+  let myCar = {}
+  myCar.color = red;
+
+- an objects key-values can include functions, which in this context are referred to as methods
+
+- ex:
+
+  car.turnKey = function() {
+    console.log('Car is running.');
+  }
+
+- this function can only be accessed through the object that it is a member of
+  .turntheKey needs to be accessed through myCar, use myCar.turntheKey
+  when invoking methods, a parentheses needs to be used 
+
+- constructing an object with properties using the constructor function
+  3 properties (key values) total, the function is a method 
+
+  var = myCar {};
+  car.mileage = 98765;
+  car.color = 'red';
+  console.log(myCar);
+  car.turnTheKey = function() {
+    console.log('The engine is running.');
+  }
+  console.log(myCar);
+  car.lightsOn = function () {
+    console.log('The lights are on.')
+  }
+  console.log(myCar);
+  myCar.lightsOn();
+  myCar.turnTheKey();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
 

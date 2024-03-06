@@ -502,11 +502,11 @@ TRY CATCH BLOCKS
     try {
       console.log(c + d)
     } catch (err) {
-      console.log(err);
+      console.log(err); //remember to console.log the error
       console.log('There was an error');
       console.log('The error was saved in the error log');
     }
-    console.log('My program does not stop.')
+    console.log('My program does not stop.') //confirms that code still ran despite error
 
   steps:
   insert the code you think might run an error in between the curly brackets of a try block
@@ -519,7 +519,16 @@ TRY CATCH BLOCKS
   throw keyword must be used inside the try block
   how to manually throw an error:
 
-    throw new ReferenceError();
+  ex:
+
+    try {
+      throw new ReferenceError(); 
+    } catch(err) {
+      console.log(err);
+      console.log('There was a Reference Error');
+    }
+    console.log('My program does not stop.')
+    
 
 
 

@@ -1,386 +1,371 @@
-Meta / Coursera
 
-"INTRODUCTION TO PROGRAMMING"
+INTRODUCTION TO PROGRAMMING
 
-Learn: 
-role of programming,
-instructions via a programming language, &
-role of javascript.
+- computer program: a series of instructions that tell a computer what to do 
 
-computer program--a series of instructions that tell a computer what to do in specific circumstances and perform a task
+- programming language: a bridge that facilitates communication between computers and people
 
-programming language--used to control computer programs; a bridge that facilitates communication between computers and people
+- for a computer to understand programming language, it needs to be stored in RAM--random access memory 
+  on a disk in binary code--a representation of machine language in 0s and 1s
+  these 0s and 1s represent electric switches 
 
-for a computer to understand programming language, it needs to be stored in RAM--random access memory on a disk in 
-binary code---representation of machine language in 0s and 1s; these 0s and 1s represent electric switches 
+- a computer's CPU--central processing unit--can comprehend binary
 
-a computer's CPU--central processing unit--can comprehend binary and update itself accordingly
+- low level languages: closer to being understood by a computer's CPU
 
-low level languages--closer to being understood by a computer's CPU
-
-high level languages--ex: javascript languages that must be converted to binary code so that a CPU can work with them
-ex: Javascript
+- high level languages: ex: javascript
+  languages that must be converted to binary code so that a CPU can work with them
 
 _____________________________________________________________________
 
-"WHY JAVASCRIPT"
+WHY JAVASCRIPT
 
-javascript makes interactivity possible, can be used for front-end and back-end development
+- javascript makes interactivity possible
 
-javascript is the only computer language that allows direct interaction with webpages dynamically on the client-side
+- JS can be used for front-end and back-end development
 
-backwards compatiblity--all websites built in the past still need to work today--without JavaScript much of the Internet becomes useless
+- JS is the only computer language that allows direct interaction with webpages dynamically on the client-side
 
-its ease-of-use: JavaScript has built-in tools, every browser has a built in Javascript engine 
+- JS is backwards compatible, it makes websites built in the past that still work today
 
-it's used widely: Javascript is used in almost every website; used as plain JavaSCript, in JavaScript Frameworks (ex: React), and used by servers Node.js
+- every browser has a built in Javascript engine 
 
-its accessible and comes with a web development community, good for new developers
+- Javascript is used in almost every website
+  it's used in frameworks (ex: React) 
+  it's used by servers (ex: Node.js)
 
-careers: JavaScript skills are high in demand
+- JS is accessible and comes with a web development community, good for new developers
 
-_____________________________________________________________________
-
-"PROGRAMMING IN JAVASCRIPT"
-
-browser vendors -- companies that build browsers, popular ca. early 2000s
-with these different browsers came different discrepancies between other browsers
-developers had to write separate code for separate browsers, which led to compatibility issues
-several projects tried to solve these compatibility issues 
-
-jquery solved this problem
-jquery--library that users could import to write code, this code worked across all browsers
-
-React (2011) solved many issues in creating, updating, and maintaining complex websites
-
-legacy code--old code found on the web, ex: jquery code you come across in an actively running project
+- JS skills are high in demand for careers
 
 _____________________________________________________________________
 
-"WRITING YOUR FIRST JAVASCRIPT CODE"
+PROGRAMMING IN JAVASCRIPT
 
-comments, 2 types:
+- browser vendors: companies that build browsers, popular ca. early 2000s
+  
+- with these different browsers came different discrepancies between other browsers
+  
+- developers had to write separate code for separate browsers, which led to compatibility issues
+  
+- jquery solved this problem
+  jquery: a library that users could import to write code, this code worked across all browsers
 
-single-line: //this is a single-line comment
+- React (2011) solved many issues in creating, updating, and maintaining complex websites
 
-multi-line: 
-/*this
-is
-a
-multi-line
-comment
-*/
-& 
-/*this is a multi-line comment on a single line */
+- legacy code: old code found on the web
 
-semi-colon ;
-used to clearly delimit parts of code from other parts of code
-ASI (automatic semi-colon insertion) usually takes care of this for you
-
-using developer tools in browser
-how to access developer tools : right click, click inspect
-you can type JS command into Devtools console section
-if you need multiple lines of code before you run them, press shift + enter to get onto the next line
-
-console.log ("Hello, World")
-output: Hello, World
-
-console.log("%cHello, World", "color: blue; font-size: 40px")
-output: Hello, World (stylized in blue with a font size of 40px)
-
-format :
-console.log("%c...", "...")
-            text   ,  style
-
-concatenation operator-- + , a plus symbol used to join pieces of text, or execute addition between numbers
-
-console.log("Hello " + "there, " + "World")
-is the same as
-console.log("Hello ", "there, ", "World")
-
-commas are included after quotation marks
 _____________________________________________________________________
 
-"VARIABLES"
+WRITING YOUR FIRST JAVASCRIPT CODE
 
-underlying structure that allows you to write JavaScript
+- comments, 2 types:
 
-learning:
-variable declaration
-variable assignment
-reassigning variable values
+- single-line: //this is a single-line comment
 
-by using a variable, you can save the name in the variable and reuse it in the future
+- multi-line:  
 
-"name" : enters a name
+            /*this
+            is
+            a
+            multi-line
+            comment
+            */
 
-variable declaration:
-var person;
-include semicolon after declaration
+            & 
 
-create a person variable with an assignment operator, = :
-var person = "John"
+            /*this is a multi-line comment on a single line */
 
-check variable:
-person;
-output >John
+- semi-colon ;
+  used to clearly delimit parts of code from other parts of code
+  ASI (automatic semi-colon insertion) does this for you, but its best practice to manually insert semicolons
 
-Use JS to output "Hello John" automatically:
-console.log("Hello", person);
->Hello, John
-inside parentheses, insert one or more values separated by commas
+- using developer tools in browser
+  right click, click inspect
+  type JS commands into Devtools console section
+  if you need multiple lines of code press shift + enter to get onto the next line
 
-create a greeting variable
-var greeting = "Hello"
+- ex:
+            console.log("%cHello, World", "color: blue; font-size: 40px")
+            //output: Hello, World (stylized in blue with a font size of 40px)
 
-console.log(greeting, person)
->Hello John
+            syntax :
+            console.log("%c...", "...")
+                        text   ,  style
 
-variable declaration :
-var ... = "..."
+- concatenation operator-- + , a plus symbol used to join pieces of text, or execute addition between numbers
 
-why variables are useful:
-they can be reassigned with different values
-the same code can be used to get different results
+- ex: 
+            console.log("Hello " + "there, " + "World")
+            is the same as
+            console.log("Hello ", "there, ", "World")
 
-single quotes can also be used inside parentheses 
-however double quotes are used when including items in single quotes
-a concatenation symbol can also be used :
-ex: console.log ("My pet dog's name is:" + petDog)
+- commas are included after quotation marks to concatenate
+
+_____________________________________________________________________
+
+VARIABLES
+
+- variable declaration:
+            
+            var person;
+
+  include semicolon after declaration
+
+- create a person variable with an assignment operator, = :
+
+            var person = "John"
+            //check variable:
+            person;
+            //output: John
+            
+- Use JS to output "Hello John" automatically:
+            
+            console.log("Hello", person);
+            //Hello, John
+
+- create a greeting variable
+            
+            var greeting = "Hello"
+            console.log(greeting, person)
+            //Hello John
+
+- variable declaration :
+            
+            syntax:
+            var ... = "..."
+
+- why variables are useful:
+  they can be reassigned with different values
+  the same code can be used to get different results
+
+- single quotes can also be used inside parentheses 
+
+- however double quotes are used when including items in single quotes
 
 _____________________________________________________________________
 
 DATA TYPES 
 
-coding efficiently involves knowing when to use different data types
+- coding efficiently involves knowing when to use different data types
 
-data--the values or information within an app
+- data: the values or information within an app
 
-7 primitive data types:
-string
-number
-boolean
-null
-undefined
-bigint
-symbol
+- 7 primitive data types:
+            string
+            number
+            boolean
+            null
+            undefined
+            bigint
+            symbol
 
-strings and numbers:
-names and descriptions are text values, or string data types
-prices are numerical values, or number data type
+- strings and numbers:
 
-different rules apply to making a string of numbers or texts 
+            numbers:
+            375
+            
+            strings:
+            "Hello World"
 
-numbers:
-//numbers
-375
+- number data types have a limited range of values
+- string data types have an unlimited range of values
 
-strings:
-//string
-"Hello World"
+- boolean:
+  2 values: true and false
+  useful for making decisions
 
-number data types has a limited range of values
-string data types have an unlimited range of values
+- null:
+  1 value, null, representing absence of value
 
-boolean:
-2 values: true and false
-useful for making decisions
+- undefined:
+  1 value, undefined, represents a variable not yet assigned a value
 
-null:
-1 value, null, representing absence of value
+- bigint:
+  big integer
+  a data type that accomodates a greater range of numbers than the number data type
 
-undefined:
-1 value, undefined, represents a variable not yet assigned a value
-
-bigint:
-big integer
-a data type that accomadates a greater range of numbers than the number data type
-
-symbol:
-a data type used as a unique identifier
+- symbol:
+  a data type used as a unique identifier
+  ex: $
 
 _____________________________________________________________________
 
 OPERATORS
 
-operators are used to perform operations on variables an dvalues
-operators are used to manipulate individual data items and return a result
+- operators are used to perform operations on variables and values
+  operators are used to manipulate individual data items and return a result
 
-ex: assignment operator, =
+- assignment operator, =
 
-learn about:
-assignment operators : arithmetic, comparison
-logical operators
+- arithmetic operators : 
+            addition, +
+            subtraction, -
+            division /
+            multiplication *
 
-arithmetic operators : 
-addition, +
-subtraction, -
-division /
-multiplication *
+- comparison operators:
+  compares and returns a logical value based on whether comparison is true
+            greater than, >
+            less than, <
+            equal to, == (single = is used for assignment operator)
+            not equal to, !=
 
-comparison operators:
-compares and returns a logical value based on whether comparison is true
-greater than, >
-less than, <
-equal to, == (single = is used for assignment operator)
-not equal to, !=
+- logical operators:
+  used to determine whether something is true or false
 
-logical operators:
-used to determine whether something is true or false
+- and operator, && : checks for both conditions to be true
+            ex : a>5 && a<10
 
-and operator, && : checks for both conditions to be true
-ex : a>5 && a<10
+- or operator, || : checks for at least one condition to be true
+            ex : a>5 || a>10
 
-or operator, || : checks for at least one condition to be true
-ex : a>5 || a>10
+- not operator, ! : returns false if the result is true
+            ex : !(a>5) 
 
-not operator, ! : returns false if the result is true
-ex : !(a>5) 
+- more examples:
 
-operators are used to control the flow of a program
-
-console.log (2+2);
-> 4
-
-console.log (2<3);
-> true
-
-console.log (2>3);
-> false
-
-console.log (10==10);
-> true
+            console.log (2+2);
+            > 4
+            
+            console.log (2<3);
+            > true
+            
+            console.log (2>3);
+            > false
+            
+            console.log (10==10);
+            > true
 
 _____________________________________________________________________
 
 NUMBERS
 
-numbers represent both integers and decimals
+- numbers represent both integers and decimals
 
-** represents exponentiation
-10**2
->100
+- ** represents exponentiation
+            ex: 
+            10**2 
+            //100
 
-% represents the remainder after division
-9%8 
->1
-16%8 
->0
+- % represents the remainder after division
+            ex:
+            9%8 
+            //1
+            16%8 
+            //0
 
-() controls the order of calculations
-2*4+8
->16
-while
-2*(4+8)
->24
-
-*see additional reading:
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
-
-MDN, References, "Expressions and operators"
-
-??? this: 
-refers to an object, depending on how this is being invoked
-in a function context: this refers to object that the function is accessed on
-ex: if function call is in the form obj.f(), then this refers to obj
+- () controls the order of calculations
+            ex:
+            2*4+8
+            //16,
+            //while
+            2*(4+8)
+            //24
 
 _____________________________________________________________________
 
 STRINGS
 
-strings are used to represent and work with a series of characters in JS
-strings are a collection of characters enclosed in single or double quotes
-'' or "": empty strings
-strings cannot break onto the next line
-delimiters--quotation marks around strings 
-apostrophes are interpreted as delimiters
-this can be resolved by enclosing single quotation marks with double quotation marks
-ex:
-'It's a lovely day'
->Uncaught SyntaxError: Unexpected identifier
-"It's a lovely day"
->"It's a lovely day"
-string literal--the value inside of delimiters
-in "123" the string literal is 123
+- strings are used to represent and work with a series of characters in JS
+
+- strings are a collection of characters enclosed in single or double quotes (delimiters)
+
+- '' or "" : empty strings
+
+- strings cannot break onto the next line
+
+- single quotes can be escaped with backslashes \'
+  or they can be enclosed in double quotes 
+
+            ex:
+            'It's a lovely day'
+            //Uncaught SyntaxError: Unexpected identifier
+            "It's a lovely day"
+            //"It's a lovely day"
+- string literal: the value inside of delimiters
+  in "123" the string literal is 123
 
 _____________________________________________________________________
 
 BOOLEANS
 
-boolean data types are used used to check if a statement is true or false
+- boolean data types are used used to check if a statement is true or false
 
-strict equality operator, unlike equality operator (==) checks for equality of value and type
-100 == "100"
->true
-while
-100 === "100"
->false
-because the number 100 is not the same type as the string "100"
+- strict equality operator (===), unlike equality operator (==) checks for equality of value and type
+            
+            100 == "100"
+            //true,
+            //while
+            100 === "100"
+            //false, because the number 100 is not the same data type as the string "100"
 
 _____________________________________________________________________
 
 OPERATORS IN DEPTH
 
-logical and operator : &&
-            both A && B must be true for statement to be true
-            ex : check if the current time is between 9 and 5
+- logical and operator : &&
+  both A && B must be true for statement to be true
+            
+            ex : 
+            //check if the current time is between 9 and 5
             var currentTime = 10;
             console.log (currentTime > 9 && currentTime < 17);
-            > true
+            // true
 
-logical or operator : ||
-            A or B must be true for statement to be true
+- logical or operator : ||
+  A or B must be true for statement to be true
+            
             ex : 
             var currentTime = 10
             console.log (currentTime > 9 || currentTime < 17);
-            > true
+            // true
 
-logical not operator : !
+- logical not operator : !
 
             var petHungry = true;
             console.log (!petHungry);
-            > false
+            // false
 
-modulus operator : %
+- modulus operator : %
 
-            ex : find out how many people can be seated at a table
-            there are 5 tables, 4 chairs per table
+            ex : 
+            //find out how many people can be seated at a table
+            //there are 5 tables, 4 chairs per table
 
             console.log (22%4) 
-            > 2
+            // 2, two people are left unseated
 
-            two people are left unseated
-
-equality operator : ==
+- equality operator : ==
 
             5 == 5 // true 
             5 == 6 // false
             
-strict equality operator : ===
-
-            compares number and data type
+- strict equality operator : ===
+  compares number and data type
+            
             5 === 5 // true
             5 === "5" // false, because the string 5 is not the same as the number 5
 
-inequality operator : !=
+- inequality operator : !=
 
             5 != 5 // false
             5 != "5" // false
 
-strict inequality operator : !==
+- strict inequality operator : !==
 
             5 !== 5 // false
             5 !== "5" // true
 
-when concatenating strings and numbers, JS coerces the numbers to behave like strings
-the end result is a string value
-ex : 365 + "days" = "365 days"
-ex : 1 + "2" // 12
+- when concatenating strings and numbers together, JS coerces the numbers to behave like strings
 
-addition assignment operator : +=
+            ex : 365 + "days" = "365 days"
+            ex : 1 + "2" // 12
 
-            ex : count the number of overtime hours worked monday through friday
+- addition assignment operator : +=
+
+            ex : 
+            //count the number of overtime hours worked monday through friday
             var overtime = 1;
             overtime = +2;
             overtime = +1;
@@ -388,9 +373,8 @@ addition assignment operator : +=
             overtime = +3;
             console.log (overtime); // 9
 
-concatenation assignment operator : +=
-
-            like addition assignment operator, but with strings, not numbers
+- concatenation assignment operator : +=
+  like addition assignment operator, but adds strings, not numbers
             var longString = "";
             longString += "Once ";
             longString += "upon ";
@@ -400,50 +384,34 @@ concatenation assignment operator : +=
             console.log(longString);
             // Once upon a time ...
 
-operator precedence 
-
-            1 * 2 + 3
-            certain operators, like multiplication, have precedence over other operators, like addition
-
-operator associativity 
-
-            https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
-
-            left-to-right associativity
-
-            (a + b) + c
-
-
-            right-to-left associativity
-
-            a + (b + c)
-
 _____________________________________________________________________
 
 WRITING STATEMENTS 
 
-we make decisions based on whether certain conditions are true or false
+- we make decisions based on whether certain conditions are true or false
 
-ex : we bring an umbrella outside depending on the weather condition, 
-if it is rainy we bring an umbrella
+- in JS there are conditional statements using if, and, but    
 
-in JS there are conditional statements using if, and, but    
-
-the if statement executes a code if a condition is true
+- the if statement executes a code if a condition is true
+           
             if (condition == true) {
             //Execute code
             }
-you can use comparison operators to evaluate the expression (== , > , < , !=)
 
-the if else statement : if a condition is true, do something, if not, do something else
+- you can use comparison operators to evaluate the expression (== , > , < , !=)
+
+- the if else statement : if a condition is true, do something, if not, do something else
+           
             if (condition == true) {
             //Execute code
             } else {
             //Execute code
             }
-ex : a driving test
-a passing grade is greater than 40
-a failing grade is less than 40
+
+            ex : 
+            a driving test
+            a passing grade is greater than 40
+            a failing grade is less than 40
 
             var result = 50;
             if (result > 40) {
@@ -451,7 +419,8 @@ a failing grade is less than 40
             } else {
             console.log("Unfortunately you did not pass.");
             }
-ex : 
+            
+            ex : 
             var food = "hot";
             if (food == "hot") {
             console.log('Too hot');
@@ -463,11 +432,12 @@ ex :
 
 _____________________________________________________________________
 
-WORKING WIth CONDITIONAL STATEMENTS (with multiple conditions)
+WORKING WITH CONDITIONAL STATEMENTS 
 
-else if and switch statements
+- else if and switch statements
 
-ex : 
+            ex : 
+            
             var place = 'first';
 
             if(place == 'first') {
@@ -482,7 +452,7 @@ ex :
             
             //Output : Gold
 
-if you have to evaluate many other conditions, use the switch statement
+- if you have to evaluate many other conditions, use the switch statement
 
             var place = 'first';
 
@@ -506,98 +476,99 @@ _____________________________________________________________________
 
 CONDITIONAL EXAMPLES
 
-flow control statements: if else and switch; they control the flow of execution of your code
-so that some code is skipped while other code is executed
+- flow control statements: if else and switch; they control the flow of execution of your code
+  so that some code is skipped while other code is executed
 
-if else is best for a binary choice in the condition
+- if else is best for a binary choice in the condition
 
-if, else if, and else can be used with a smaller number of possible outcomes
-you need to check
+- if, else if, and else can be used with a smaller number of possible outcomes you need to check
 
-when there are a lot of possible outcomes you ened to check, use the switch statement
+- when there are a lot of possible outcomes you ened to check, use the switch statement
 
 _____________________________________________________________________
 
 PRACTICE CONDITIONAL STATEMENTS
 
-exercise : practice working with if else and switch statements
+- exercise : practice working with if else and switch statements
 
-var age = 10;
-if (age >= 65) {
-            console.log("You get your income from your pension");
-} else if (age <= 65 && age >= 18) {
-            console.log("Each month you get a salary.");
-} else if (age < 18) {
-            console.log ("You get an allowance.");
-} else {
-            console.log ("The value of the age variable is not numerical.");
-}
-
-var day = Sunday;
-
-switch(day) {
-case "Monday": 
-            console.log("Do something");
-            break;
-case "Tuesday":
-            console.log("Do something");
-            break;
-case "Wednesday":
-            console.log("Do something");
-            break;
-case "Thursday":
-            console.log("Do something");
-            break;
-case "Friday":
-            console.log("Do something");
-            break;
-case "Saturday":
-            console.log("Do something");
-            break;
-case "Sunday":
-            console.log("Do something");
-            break;
-default:
-            console.log("There is no such day");
-}
-
+            var age = 10;
+            if (age >= 65) {
+                        console.log("You get your income from your pension");
+            } else if (age <= 65 && age >= 18) {
+                        console.log("Each month you get a salary.");
+            } else if (age < 18) {
+                        console.log ("You get an allowance.");
+            } else {
+                        console.log ("The value of the age variable is not numerical.");
+            }
+            
+            var day = Sunday;
+            
+            switch(day) {
+            case "Monday": 
+                        console.log("Do something");
+                        break;
+            case "Tuesday":
+                        console.log("Do something");
+                        break;
+            case "Wednesday":
+                        console.log("Do something");
+                        break;
+            case "Thursday":
+                        console.log("Do something");
+                        break;
+            case "Friday":
+                        console.log("Do something");
+                        break;
+            case "Saturday":
+                        console.log("Do something");
+                        break;
+            case "Sunday":
+                        console.log("Do something");
+                        break;
+            default:
+                        console.log("There is no such day");
+            }
 
 _____________________________________________________________________
 
 
 LOOPING CONSTRUCTS
 
-looping in JS is used to execute repetitive tasks
 
-loops contain counter variables that count how many times a loop is fulfilled before it needs to reach a certain condition
+- looping in JS is used to execute repetitive tasks
 
-ex : counting down from 10 to 1 before we say happy new year
+- loops contain counter variables that count how many times a loop is fulfilled before it needs to reach a certain condition
 
-i is commonly used as a counter, it specifies where to start and stop counting
+            ex : 
+            counting down from 10 to 1 before we say happy new year
 
-use loops instead of console logging repeatedly 
+            i is commonly used as a counter, it specifies where to start and stop counting
 
-            for (var i = 1; i<101; i++) {
-            console.log(i);
-            } 
+            use loops instead of console logging repeatedly 
 
-types of loops : for, while, nested
+                        for (var i = 1; i<101; i++) {
+                        console.log(i);
+                        } 
 
-for loop : 
+- types of loops : for, while, nested
 
+- for loop : 
+            
+            syntax:
             for (initialization; condition; afterthought) {
             statement    
             }
 
-            used to run a code a certain number of times
+  used to run a code a certain number of times
             
-            set the value (ex : var i=0)
+  set the value (ex : var i=0)
             
-            specify the condition (ex: var i<3)
+  specify the condition (ex: var i<3)
 
-            increment the counter (ex:i++) increase or decrease
+  increment the counter (ex: i++ or i--) 
 
-while loop :
+- while loop :
 
             var i = 1;
             while (i < 4){
@@ -605,36 +576,32 @@ while loop :
             i=i+1;
             }
 
-            the start of the counter is set outside of the while loop
+  the start of the counter is set outside of the while loop
             
-            the incrementing is done inside the loop's body
+  the incrementing is done inside the loop's body
 
-nested loop : a loop inside of a loop
+- nested loop : a loop inside of a loop
 
 _____________________________________________________________________
 
 FOR LOOP
 
-for loops automate code repetition
+- for loops automate code repetition
 
-code :
+- declaration, consisting of counter, named i for iterator :
+  the counter's start value must be assigned
+  there must be an end count value, which specifies how many times the loop must run until loop ends
+  there must be an incrementor, which increases (i++) or decreases(i--) the value of i by 1 each time the code runs
 
-declaration, consisting of counter, named i for iterator :
-            this counter's start value must be assigned
-            there must be an end count value, which specifies how many times the loop must run
-            there must be an exit condition works with incrementor to prevent loop from ending forever; i = a value that the code must terminate when this i value is false
-            there must be an incrementor, which increases (i++) or decreases(i--) the value of i by 1 each time the code runs
-
-loop body :
-            enclosed in curly braces
-            specify what code should do once exit condition is met
+- loop body :
+  enclosed in curly braces
+  specifies what code should do once exit condition is met
 
             ex : 
-            
-                        for (var i = 1; i <= 3; i++) {
-                          console.log(i)
-                        }
-                        console.log('Go')
+            for (var i = 1; i <= 3; i++) {
+              console.log(i);
+            }
+            console.log('Go')
            
             i = 1: the count starts at 1
             i <=3: the count includes all values equal to or less than 3
@@ -671,24 +638,27 @@ _____________________________________________________________________
 
 WHILE LOOP
 
-code that repeats as long as a specified condition is true
+- code that repeats as long as a specified condition is true
 
-counter value is set before the loop and must be clearly defined
-this value is the value at which the counter starts counting
+- counter value is set before the loop and must be clearly defined
+  this value is the value at which the counter starts counting
 
             ex: var counter = 3 or var i = 3
 
-only need to specify exit condition in parentheses of loop declaration, which gives JS an expression to check
-if this expression returns true, JS will run the code inside the while loop
+- only need to specify exit condition in parentheses of loop declaration
+  this which gives JS an expression to check
+  if this expression returns true, JS will run the code inside the while loop
+  when this expression becomes false, loop stops
 
-            ex : while (counter > 0) {
+            ex : 
+            while (counter > 0) {
               console.log(counter);
               counter = counter - 1;
             }
             console.log('Happy New Year!')
-once exit condition is met, any code under the last curly brace will run
 
                         OR
+
             while (i > 0) {
             console.log(i);
             i--;
@@ -699,48 +669,48 @@ _____________________________________________________________________
 
 NESTED LOOPS
 
-used to perform more than one task at the same time
+- used to perform more than one task at the same time
 
-ex :             for (i = 0; i < 2; i++) {
-                        for (j = 1; j <=7; j++) {
-;                        console.log("Week" + i + " day " + j);
-                        }
-                  }
+            ex:    
 
-ex : create a two-week plan for Monday through Fridays
-5 days for week 1, 5 days for week 2
-Week 1- day 1
-Week 1- day 2
-Weel 1-day 3
-etc.
+            for (i = 0; i < 2; i++) {
+              for (j = 1; j <=7; j++) {
+                console.log("Week" + i + " day " + j);
+              }
+            }
 
-outer loop loops over the weeks
-for (var = 1; i <= 2; i++) {
+            ex:
+            
+            create a two-week plan for Monday through Fridays
+            5 days for week 1, 5 days for week 2
 
-inner loop loops over the days
+            Week 1- day 1
+            Week 1- day 2
+            Week 1-day 3
+            etc.
 
-for (var i = 1; i <= 2; i++) {
-  for (var j = 1; j<=5; j++) {
-  }
-}
+            outer loop loops over the weeks,
+            inner loop loops over the days:
 
-console log outputs values of i and j to the console
+            for (var i = 1; i <= 2; i++) {
+              for (var j = 1; j<=5; j++) {
+              }
+            }
 
-be careful not to nest too many loops, as this slows down code
-
-ex: 
+            ex: 
             for (var year = 2023; var < 2025; year++) {
               console.log(year);
                 for (var month = 6; var < 9; month++) {
                   console.log("--------", month);
                 }
               }
+- be careful not to nest too many loops, as this slows down code
 
-use i and j variables instead of variables like month and year while coding
+- use i and j variable names
 
 _____________________________________________________________________
 
-USES of loops
+USES OF LOOPS
 
 exercise : you are making cards for children letter blocks A through G to be presented on a kid's toy store website
 

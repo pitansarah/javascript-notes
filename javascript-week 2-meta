@@ -1,57 +1,62 @@
 FUNCTIONS
 
-- functions allow you to take code that performs a set of related actions and group them under a single label
+- functions let you to take code that performs a set of related actions and group them under a single label
 
-- you invoke function to run its code
+- you invoke or call a function to run its code
 
-- exercise : create a function that adds two numbers, a and b, together to create c
+- exercise : 
+  
+  //create a function that adds two numbers, a and b, together to create c
+    
   function addTwoNums() {
-  var a = 5;
-  var b = 10;
-  var c = a + b;
-  console.log(c);
-  } 
-  addTwoNums(); //calls function
+    var a = 5;
+    var b = 10;
+    var c = a + b;
+    console.log(c);
+    } 
+    addTwoNums(); //this calls function
 
-- exercise : make addTwoNums() more flexible with the values it accepts
-  function(a,b) { //a and b are parameters
-  var c = a + b;  
-  console.log(c);
-  }
-  addTwoNums(2,2); //2 and 2 are arguments
+- exercise : 
+
+  //make addTwoNums() more flexible with the values it accepts
+
+    function(a,b) { //a and b are parameters
+    var c = a + b;  
+    console.log(c);
+    }
+    addTwoNums(2,2); //2 and 2 are arguments
 
 _________________________________________________
 
 INTRODUCTION TO OBJECTS
 
-- used to group together a collection of related properties belonging to one entity
-
-- use a dot operator to describe variables of the storeManager object
+- objects are used to group together a collection of related properties belonging to one entity
 
 - a variable's name is a property key
 
-- a variable's value is a property value of an object
+- a variable's value is a property value 
 
-- an object can also be defined by listing the key value pairs inside the object literal, 
-  which specifies them as comma delimited properties
+- an object can be defined with object literal notation:
+  declare the object  
+  assign this object to its properties using an assignment operator followed by curly braces
+  list each object property within curly braces
+  name the property, followed by a colon
+  separate each property with a comma
 
-- list each object property within curly braces, after the assignmnt operator, of an object declaration, 
-  denoting its property keys and values
+- object literal notation: 
 
-- ex, object literal syntax: 
-
-  var assistantManager = {
-    movement: 3,
-    socialSkills: 30,
-    streetSmarts: 30,
-    health: 40
-  }
+  ex:
+    var assistantManager = {
+      movement: 3,
+      socialSkills: 30,
+      streetSmarts: 30,
+      health: 40
+    }
 
 - you can add more properties to an object once its been declared by using dot notation
 
-- ex:
-
-  assistant Manager.nextAchievement = "get promoted";
+    ex:
+     assistant Manager.nextAchievement = "get promoted";
 
 _________________________________________________
 
@@ -64,18 +69,18 @@ OBJECT LITERALS AND DOT NOTATION
   use dot notation to declare new properties of the object,
   use the assignment operator to add values to the properties of the object
 
-- ex: 
-
-  var house {};
-  house.rooms = 4;
-  house.color = "pink";
-  house.priceUSD = 12345
+    ex: 
+  
+    var house {};
+    house.rooms = 4;
+    house.color = "pink";
+    house.priceUSD = 12345
 
 - you can use this object notation along with the object literal notation to add properties as you go
 
 _________________________________________________
 
-OBJECT LITERAtlS AND BRACKET NOTATION
+OBJECT LITERALS AND BRACKET NOTATION
 
 - declare the object as a variable
 
@@ -85,46 +90,48 @@ OBJECT LITERAtlS AND BRACKET NOTATION
 
 - bracket notation can be used alongside dot notation
 
-- with this notation, you can add spaces inside property keys
+- bracket notation allows for spaces inside property keys
 
-- unlike dot notation, bracket notation can evaluate expressions
+- bracket notation can evaluate expressions
 
-- ex, bracket notation:
+    ex of bracket notation:
+  
+    var house = {};
+    house['rooms'] = 4;
+    house['color'] = 'pink';
+    house['priceUSD'] = 12345;
 
-  var house = {};
-  house['rooms'] = 4;
-  house['color'] = 'pink';
-  house['priceUSD'] = 12345;
-
-- ex, evaluating expressions
-
-  var arrOfKeys = ['speed', 'altitude', 'color'];
-  var drone = {
-    speed: 100,
-    altitude: 200,
-    color: red"
-  }
-  for (var i = 0; i < arrOfKeys.length; i++) {
-    console.log(drone[arrofKeys[i]]);
-  }
-
-  /* output : 
-  100
-  200
-  red
-  */
+   ex of bracket notation evaluating expressions:
+  
+    var arrOfKeys = ['speed', 'altitude', 'color'];
+    var drone = {
+      speed: 100,
+      altitude: 200,
+      color: red"
+    } for (var i = 0; i < arrOfKeys.length; i++) {
+      console.log(drone[arrofKeys[i]]);
+    }
+  
+    /* output : 
+    100
+    200
+    red
+    */
 _________________________________________________
 
 ARRAYS ARE OBJECTS
 
 push():
+
   - adds items to the end of an array
-  - ex:
+
+    ex:
     var fruits = [];
     fruits.push("apple);
     fruits.push("pear"); 
     //[apple, pear]
-  - ex:
+
+    ex:
     var ourArray = [1, 2, 3];
     ourArray push([4, 5, 6]);
     console.log(ourArray)
@@ -132,25 +139,27 @@ push():
 
 pop()
   - removes the last item from an array
-  - ex:
+    
+    ex:
     fruits.pop();
     console.log(fruits); 
     //[apple]
 
-- you can use return instead of console.log
+- you can use return instead of console.log, but the result doesn't print to console
 
-  ex: 
-  function arrayBuilder(one, two, three){
-    var arr = [];
-    arr.push(one);
-    arr.push(two);
-    arr.push(three);
-    return arr;
-  }
+    ex: 
+    function arrayBuilder(one, two, three){
+      var arr = [];
+      arr.push(one);
+      arr.push(two);
+      arr.push(three);
+      return arr;
+    }
 
 - you can also save the function call to a variable and console.log it
 
-  ex: var simpleArr = arrayBuilder('apple', 'pear', 'plum');
+    ex: 
+    var simpleArr = arrayBuilder('apple', 'pear', 'plum');
       console.log(simpleArr); 
       //['apple', 'pear', 'plum']
 
@@ -158,13 +167,15 @@ _________________________________________________
 
 MATH OBJECT CHEAT SHEET
 
-number constants, built into Math object
+- these methods are built into the math object
+
+number constants
 
   - Math.PI = 3.14159
   - Math.E (Euler's constant) = 2.718
   - Math.LN2 (natural logarithm) = 0.693
 
-rounding methods, build into Math object
+rounding methods
 
   - Math.ceil(): rounds up to closest integer
   - Math.floor(): rounds down to closest integer
@@ -172,7 +183,7 @@ rounding methods, build into Math object
     otherwise rounds down to closest integer
   - Math.trunc(): trims the decimal, leaving only the integer
 
-arithmetic and calculus method
+arithmetic and calculus methods
 
   - Math.pow(2,3): calculates the number 2 to the power of 3
   - Math.sqrt(16): calculates the square root of 16
@@ -184,22 +195,29 @@ arithmetic and calculus method
     Math.log10()
   - Math.min(9, 8, 7): returns the minimum value
   - Math.max(9, 8, 7): returns the maximum value
-  - trigonometric method:
-    Marh.sin()
-    (Math.cos()
+  - trigonometric methods:
+    Math.sin()
+    Math.cos()
     Math.tan()
 
 _________________________________________________
   
 MATH OBJECT
 
-- random method: generates a number between 0 and 0.99
+- random method: generates a number between 0 and 0.99; Math.random()
+- round method: rounds a number to its nearest integer; Math.round()
+- ceil method: rounds a number up to its nearest integer; Math.ceil()
+- floor method: rounds a number down to its nearest integer; Math.floor()
+- trunc method: returns the integer part of a number; Math.trunc()
+- Math.sign() ???
+- pow method: returns the value of x to the power of y; Math.pow()
+- see more : https://www.w3schools.com/js/js_math.asp
 
 _________________________________________________
 
 A CLOSER LOOK AT STRINGS
 
-- iterable: a data type that can be iterated over using a "for of" loop, ex: arrays, strings
+- iterable data: data that can be looped over; ex: arrays, strings
 
 - for loop over arrays 
 
@@ -213,33 +231,27 @@ A CLOSER LOOK AT STRINGS
 
 - for loop over strings
 
-  ex:   
+    ex:   
+    
+      var letters = 'abc';
+    
+      for (i = 0; i < letters.length; i++) {
+        console.log(letters[i]);
+      }
+
+- pop() doesn't work on any other data type besides arrays
+
+- concatenating strings
+
+    ex:
   
-    var letters = 'abc';
+    var greet = 'Hello';
+    var user = 'Lisa';
   
-    for (i = 0; i < letters.length; i++) {
-      console.log(letters[i]);
-    }
+    console.log(greet.concat(user)); 
+    //output: Hello Lisa
 
-- pop() doesn't work on strings
-
-  ex: 
-
-  var greet = 'Hello';
-
-  console.log(greet(pop)); //leads to an error because strings cannot use pop method
-
-- adding strings is the same as concatenating strings
-
-  ex:
-
-  var greet = 'Hello';
-  var user = 'Lisa';
-
-  console.log(greet.concat(user)); //note the syntax, use dot notation
-  //output: Hello Lisa
-
-  _________________________________________________
+_________________________________________________
 
 STRING CHEAT SHEET
 
@@ -248,22 +260,22 @@ STRING CHEAT SHEET
   syntax:
   string.length
 
-  ex: 
-  var greet = "Hello, ";
-  greet.length; //7
+    ex: 
+    var greet = "Hello, ";
+    greet.length; //7
 
 - charAt() method: returns a character at a specified index in a string
 
   syntax:
   string.charAt(index);
 
-  ex:
-  var greet = "Hello, ";  
-  greet.charAt(0); //'H'
-
-  ex (get the last letter in a string):
-  var greet = "Hello,";
-  greet.charAt(greet.length - 1); // ","
+    ex:
+    var greet = "Hello, ";  
+    greet.charAt(0); //'H'
+  
+    ex (get the last letter in a string):
+    var greet = "Hello,";
+    greet.charAt(greet.length - 1); // ","
 
 - concat() method: 
   joins two or more strings
@@ -273,14 +285,14 @@ STRING CHEAT SHEET
   syntax:
   string.concat(string1, string2, ..., stringX);
 
-  ex: 
-  Wo.concat("rl").concat("d"); //"World"
-
-  ex: 
-  var greet = 'Hello ';
-  var place = 'World'
-
-  greet.concat(place); //'Hello World'
+    ex: 
+    Wo.concat("rl").concat("d"); //"World"
+  
+    ex: 
+    var greet = 'Hello ';
+    var place = 'World'
+  
+    greet.concat(place); //'Hello World'
 
 - indexOf(): 
   returns the first occurence of a value in a string 
@@ -290,16 +302,16 @@ STRING CHEAT SHEET
   syntax:
   string.indexOf(searchvalue, start);
 
-  ex:
-  "ho-ho-ho".indexOf('h'); //0
+    ex:
+    "ho-ho-ho".indexOf('h'); //0
+    
+    ex:
+    let text = 'ho-ho-ho';
+    text.indexOf('h', 2); //3 //find index of h starting at position 2
   
-  ex:
-  let text = 'ho-ho-ho';
-  text.indexOf('h', 2); //3
-
-  ex:
-  let greet = "Hello World, welcome to the Universe.";
-  greet.indexOf('welcome'); //13
+    ex:
+    let greet = "Hello World, welcome to the Universe.";
+    greet.indexOf('welcome'); //13
 
 - lastIndexof():
   finds the last instance of a value in a string
@@ -314,29 +326,31 @@ STRING CHEAT SHEET
   syntax:
   string.split(separator, limit)
 
-  ex:
-  "ho-ho-ho".split('-'); //['ho', 'ho', 'ho']
-
-  ex:
-  let text = "How are you doing today?" 
-  const myArray = split.text(" "); // ['How', 'are', 'you', 'doing', 'today?']
-  let word = myArray[1]; // 'are'
-
-  ex:
-  let text = "How are you doing today?"
-  const myArray = split.text(' ', 3); // ['How', 'are', 'you'], array is limited to 3 words
+    ex:
+    "ho-ho-ho".split('-'); //['ho', 'ho', 'ho']
+  
+    ex:
+    let text = "How are you doing today?" 
+    const myArray = split.text(" "); // ['How', 'are', 'you', 'doing', 'today?']
+    let word = myArray[1]; // 'are'
+  
+    ex:
+    let text = "How are you doing today?"
+    const myArray = split.text(' ', 3); // ['How', 'are', 'you'], array is limited to 3 words
 
 - .toUpperCase & .toLowerCase:
   changes the case of the values in a string
   
-  ex:
-  let greet = "Hello";
-  greet.toUpperCase; //"HELLO"
-  greet.toLowerCase; //"hello"
+    ex:
+    let greet = "Hello";
+    greet.toUpperCase; //"HELLO"
+    greet.toLowerCase; //"hello"
 
   _________________________________________________
 
 OBJECT METHOD
+
+- method: a function that is a property of an object
 
 - an object's properties are referred to as key-value pairs
 
@@ -347,7 +361,7 @@ OBJECT METHOD
   let myCar = {}
   myCar.color = red;
 
-- an objects key-values can include functions, which in this context are referred to as methods
+- an object's key-values can include functions or methods, which are functions of an object
 
 - ex:
 
@@ -357,7 +371,7 @@ OBJECT METHOD
 
 - this function can only be accessed through the object that it is a member of
   .turntheKey needs to be accessed through myCar, use myCar.turntheKey
-  when invoking methods, a parentheses needs to be used 
+  when invoking methods, a parentheses needs to be used after function
 
 - constructing an object with properties using the constructor function
   3 properties (key values) total, the function is a method 
@@ -377,11 +391,135 @@ OBJECT METHOD
   myCar.lightsOn();
   myCar.turnTheKey();
 
+- constructor function (w3):
+  creates a blueprint for many objects of the same type
+  objects using the constructor function are called using the "new" keyword
+  use uppercase first letter when naming constructor functions 
+  "this" keyword used to construct function properties
 
+  ex:
 
+    function Person(first, last, age, eye) {
+      this.firstName = first;
+      this.lastName = last;
+      this.age = age;
+      this.eyeColor = eye
+    }
 
+    const myFather = new Person('John', 'Doe', '50', 'brown');
+    
+    //get script to run in HTML
+    document.getElementById("").innerHTML = 'My father is' + myFather.age + ' .'
+    
+_________________________________________________
 
+TYPE OF
 
+- typeof operator accepts a value and returns the data type of that value as a string result
+ 
+  ex:
+  
+    var test = typeof(10);
+    console.log(test);
+    //number
+
+    var test = typeof('What data type is this?');
+    console.log(test);
+    //string
+
+    var test = typeof(1<2);
+    console.log(test);
+    //boolean
+
+    var test = [1, 2, 3, 4];
+    console.log(test);
+    //object, because arrays are objects
+
+    var test = function () {
+    };
+    console.log(test)l
+    //function
+
+- can return the following results:
+  string
+  number
+  object 
+  boolean
+  function
+  null
+  undefined
+
+_________________________________________________
+
+BUGS AND ERRORS
+
+- a bug causes a computer program to run in an unintended way
+
+- an error stops a computer program from running; ex: syntax, reference, and type errors
+  when an error gets thrown, the program stops
+  
+- reference error: occurs when data isn't defined or declared
+    ex:  
+    console.log(c + d);
+      //returns reference error, code doesn't run
+
+- syntax error: occurs when you write an unreadable bit of code
+    ex:
+    var greet = "Hello;
+    //returns syntax error, missing quotation mark
+
+- type error:
+    ex:
+    (5).pop;
+    //returns type error because pop() is an array method and 5 is a number data type not an array data type
+
+_________________________________________________
+
+TRY CATCH BLOCKS
+
+- when an error prevents code from running there are built in JS commands that help code run despite errors
+
+- these commands use the words "throw," "try," and "catch"
+
+- error handling: process of preventing code from stopping when there's an error
+
+- if a piece of code throws an error, it can get wrapped inside a try block 
+
+- after this, the error is catched within a catch block
+
+  syntax:
+
+    try {
+      console.log(); 
+    } catch err {
+    //do something here...
+    }
+
+- try catch block
+
+  ex:
+
+    try {
+      console.log(c + d)
+    } catch (err) {
+      console.log(err);
+      console.log('There was an error');
+      console.log('The error was saved in the error log');
+    }
+    console.log('My program does not stop.')
+
+  steps:
+  insert the code you think might run an error in between the curly brackets of a try block
+  insert a catch block; a catch block catches the actual error, which is an object
+  name the error something short and simple, ex: err
+  console log the error
+  console log the lines you want to run after error is catched
+
+- "throw" keyword: throw an error from the try block to the catch block
+  throw keyword must be used inside the try block
+  how to manually throw an error:
+
+    throw new ReferenceError();
 
 
 

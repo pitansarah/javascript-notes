@@ -490,7 +490,7 @@ TRY CATCH BLOCKS
   syntax:
 
     try {
-      console.log(); 
+      console.log(err); 
     } catch err {
     //do something here...
     }
@@ -528,12 +528,117 @@ TRY CATCH BLOCKS
       console.log('There was a Reference Error');
     }
     console.log('My program does not stop.')
-    
+
+_________________________________________________
+
+SYNTAX, LOGICAL, AND RUNTIME ERRORS
+
+- types of errors:
+  ReferenceError
+  SyntaxError
+  TypeError
+  RangeError
+
+- ReferenceError:
+  occurs when you try and use an undeclared variable
+  
+  ex:
+    console.log(username);
+    //Uncaught ReferenceError : username is not defined
+
+- SyntaxError
+  occurs when you write invalid JS code or execute syntax incorrectly
+  
+  ex:
+    var a "missing assignment operator"
+    //Uncaught Syntax Error : unexpected string
+  SyntaxErrors cannot be caught with try...catch blocks
+
+- TypeError
+  occurs when you try and perform a method on a non-supported data type
+  
+  ex:
+    "string".pop()
+    //Uncaught Type Error : "hello".pop is not a function
+
+- RangeError 
+  occurs when we use a value that is out of range of the acceptable values for a function
+ 
+  ex:
+    (10).toString(2);
+    '1010'
+
+  this code converts 10 to a base 2 number and returns it as a string
+  however, if you try to convert a number to base 100, which does not exist/is out of range...
+  
+  ex:  
+    (10).toString(100);
+  ...you get the following error:
+  //Uncaught RangeError : toString() radix argument must be between 2 and 36
+  
+_________________________________________________
+
+UNDEFINED, NULL, AND EMPTY VALUES
+
+- use these values when you need to mark the places where a value should exist
+- null value:
+  represents the intentional absence of a value
+  its also a return value of some built in JS methods
+
+  ex, using the match method:
+    var letters = 'abc';
+    letters.match(/a/);
+
+    in console:
+    /*[
+    'a',
+    index: 0,  
+    input: abc,
+    groups: undefined
+    ] */
+
+ but if you write the following code: 
+    var letters = 'abcd';
+    letters.match(/d/);
+  the console returns:
+    //null
+  
+- match method : searches for a substring in a string, returns null if no result
+  syntax: string.match("...") or string.match(/.../)
+
+- undefined value:
+  used for creating a variable and assign it a value later
+  also occurs when a variable is declared without an assignment
+
+  ex:
+    console.log(Jane);
+    //undefined
+
+  ex:
+    var Jane;
+    //undefined
+
+  after declaring them, you can later assign these variables values 
+  best practice: assign values when you declare them
+  if you try to run code with an undefined variable, you'll receive a Reference Error
+  undefined values also occur when you try to access an object property that doesn't exist
+
+  ex:
+    var game = {
+      score = 100;
+    }
+    game.Score;
+    //undefined
+
+- empty strings: 
+
+  ex:
+    var 1 = ' '; 
 
 
-
-
-
+ 
+  
+  
 
 
 

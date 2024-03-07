@@ -11,11 +11,10 @@ for (i = 0; i < nums.length; i++) {
   }
 }
 
-function([ ]) {
-  let a = Math.secondmin;
-  let b = Math.secondmax;
-  alert(sum a + b);
+function sumSecondLowAndHigh (arr) {
+  let sorted = arr.sort(function (a,b) {a-b});
+  alert (sorted[1], sorted[sorted.length-2]);
 }
 
-alert(sum (1) (-1)
+sumSecondLowAndHigh([1, 5, 4, 2, 3, 6, 7]);
 

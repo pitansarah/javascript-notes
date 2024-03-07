@@ -16,3 +16,6 @@ function([ ]) {
   let b = Math.secondmax;
   alert(sum a + b);
 }
+
+alert(sum (1) (-1)
+

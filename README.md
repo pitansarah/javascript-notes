@@ -1,1 +1,1 @@
-Notes on JavaScript from various online sources.
+Notes on JavaScript from various free, online sources.

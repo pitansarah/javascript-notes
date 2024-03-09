@@ -1,1 +1,252 @@
+INTRODUCTION TO FUNCTIONAL PROGRAMMING
+
+- programming paradigms: different styles of coding
+  functional programming (FP)
+  object-oriented programming (OOP)
+
+- in functional programming:
+  there is a clear delineating between data and functions
+
+- in object-oriented programming
+  you combine both data and functions into objects
+
+________________________________
+
+RETURN VALUES FROM FUNCTIONS
+
+- you can return values inside one function inside another function
+
+  ex: 
+  function doubleIt(num) {
+    return num * 2
+  }
+
+  function objectMaker(val) {
+    return {
+      prop: val
+    }
+  }
+
+objectMaker(doubleIt(100));
+//{prop: 200}
+
+________________________________
+
+FUNCTION CALLING AND RECURSION
+
+- functions that loop are useful unless if they run infinitely 
+
+- recursion is a function that calls itself
+
+- recursive functions can run infinitely if done incorrectly
+
+- recursion is an alternative way to run repetitive code without loops
+
+- to avoid infinite recursion, set counter starting value, incremement, and exit condition
+
+  ex:
+  let counter = 3;
+  function.example() {
+    console.log(counter);
+    counter = counter - 1;
+    if (counter === 0) return;
+    example();
+
+________________________________
+
+INTRODUCTION TO SCOPE
+
+see : https://www.freecodecamp.org/news/scope-in-javascript-global-vs-local-vs-block-scope/#how-to-access-local-variables
+
+
+- scope determines which part of code are accessible and which are inaccessible
+
+- global scope: code that's outside of a function
+
+- local scope: code that's inside of a function
+
+- if a variable is defined within a function, you can say that it's scoped to that function
+
+- the scope chain: 
+  chain of scope references a function has to its parent scope
+  the process of searching for variables through multiple scopes
+  starts with local or block and moves down to global scope 
+
+- lexical scope:
+  the scope of a function is determined by where the function is declared, not where it is called
+
+    
+
+________________________________
+
+THE FUNCTIONAL PROGRAMMING PARADIGM
+
+FP :
+- when writing FP code data and functions are kept separate 
+
+- in FP data is passed into functions when we want something computed
+
+- in FP functions return new values and then use those values somewhere else in the code
+
+  ex:
+
+    function getDistance (mph, h) {
+      return mph * h 
+    }
+    var mph = 60;
+    var h = 2;
+    var distance = getDistance(mph, h);
+    console.log(distance);
+
+ OOP:
+
+- data and functionality are properties and methods inside objects
+
+  ex:
+
+    var virtualPet = {
+      sleepy: true.
+      nap: function() {}
+    }
+
+- in OOP methods update properties stored in object instead of generating new return values
+
+- if we want to change sleepy property:
+
+    var virtualPet = {
+      sleepy: true,
+      nap: function () {
+        this.sleepy = false
+      }
+    }
+  console.log(virtualPet.sleepy) // true
+  virtualPet.nap()
+  console.log(virtualPet.sleepy) // false
+
+- OoP helps us model real-life objects 
+
+- works best when grouping of properties and data in an object belong together
+
+FP, important concepts:
+
+- first-class functions
+- higher-order function
+- pure functions and side-effects
+
+- first-class functions
+  
+  are values that we can: 
+    pass into other functions like a string or number,
+    save in a variable
+    return from other functions
+    
+  are values just as strings or numbers
+
+  ex: 
+    function addTwoNums(a, b) {
+      console.log(a + b);
+    }
+
+    function randomNum() {
+      return Math.floor((Meth.random() * 10) + 1);
+    function specificNum() {return 42};
+
+    var useRandom = true;
+
+    var getNumber;
+
+    if(useRandom) {
+      getNumber = randomNum;
+    } else {
+      getNumber = specificNum
+    }
+  
+    addTwoNums (getNumber(), getNumber())
+
+- higher order functions
+
+  a function that has either one or both of the following characteristics"
+    it accepts other functions as arguments
+    it returns functions when invoked
+
+  ex: 
+    function addTwoNums(getNumber1, getNumber2) {
+      console.log(getNumber1() + getNumber2());
+    }
+
+  this receives arguments then invokes and concatenates them
+
+- pure functions and side-effects:
+
+  returns the same result as long as it's given the same values
+
+  ex:
+    function addTwoNums(a, b) {
+      console.log(a + b);
+    }
+
+  do not have side-effects, including:
+    changing variables outside of the function
+    calling a Browser API
+    calling Math.random()
+
+- impure functions
+  use non-local variables for computing is output
+  creates a side effect by modifying another variable
+
+________________________________
+
+SCOPING WITH VAR, LET, AND CONST
+
+- functions can build local scope and block scope
+
+- block scope: 
+  a variable is only accessible within a code block, such as if, else, switch, for, and while
+  variables with block scope are further nested than local scope
+  local scoped variables are further nested than global scope
+  occurs when you declare a variable using let or const
+  unlike local scope where variables are accessible within their function, 
+  block scoped variables are only accessible within their block
+
+  ex (variable shadowing):
+
+    let color = 'red';
+    if (color == 'red') {
+      let color == 'blue'
+    }
+
+  two unique instances of red variable, one in global scope, one in block scope
+  one red variable shadows the other
+
+- declaring variables with var keyword
+  variable can be used before it is declared
+  the same variable can be redeclared
+  variables can be scoped to a function or scoped globally
+
+- declaring variables with let and const
+  variables can't be used before they are declared (but they eventually need to be declared)
+  variables can't be redeclared
+  variables are scoped to the block
+
+- use let when the variable value might change
+
+- use const when the variable value will not change
+
+________________________________
+
+COMPARING VAR, LET, AND CONST
+
+- let and const is recommended
+
+- from most to least lenient: var, let, const
+
+
+
+
+
+
+
+
+
+
 

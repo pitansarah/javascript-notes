@@ -240,7 +240,32 @@ COMPARING VAR, LET, AND CONST
 
 - from most to least lenient: var, let, const
 
+________________________________
 
+INTRODUCTION TO OBJECT-ORIENTED PROGRAMMING
+
+- OOP uses objects to group data and functionality
+
+- templates/classes are used to write code for multiple objects
+
+- the this keyword makes a generic alias for all objects
+
+________________________________
+
+CLASSES
+
+- classes are a blueprint you can use to build many objects
+
+  ex:
+    class Car {
+      constructor(color, speed)
+    }
+
+  syntax:
+  "class" followed by class name, capitalized, curly brackets
+  constructor function, with parameters accepted, curly brackets
+  all properties of the function, using this keyword
+  
 
 
 

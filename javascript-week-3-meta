@@ -258,20 +258,205 @@ CLASSES
 
   ex:
     class Car {
-      constructor(color, speed)
+      constructor(color, speed) {
+    }
+
+    turboOn() {
+      console.log('The turbo is on.')
     }
 
   syntax:
-  "class" followed by class name, capitalized, curly brackets
-  constructor function, with parameters accepted, curly brackets
+  "class" followed by class name, capitalized, followed by curly brackets
+  constructor function, with all parameters needed in parentheses, followed by curly brackets
   all properties of the function, using this keyword
-  
+  afer constructor is defined, add as many methods as you want, without "function," just method name
 
+  accessing the function:
+  name of car, specifically
+  .name of function
 
+    car1 = new Car(red, 100mph);
+    car1.turboOn();
 
+  ex:
+    class Car {
+      constructor(brand) {
+        this.carname = brand;
+      }
+    }
+    mycar =  new Car("Ford");
 
+  ex :
+  https://www.w3schools.com/JsrEF/jsref_constructor_class.asp
 
+    class Car {
+      constructor(brand) {
+        this.carname = brand;
+      }
+    }
+    present() {  
+      return 'I have a ' + this.carname;
+    }
+    class Model extends Car {
+      constructor(brand, mod) {
+        super(brand);
+        this.model = mod;
+      }
+    }
+    show() {
+      return this.present() + ,' it is a ' + this.model;
+    }
 
+  mycar = new Model ("Ford," "Mustang");
+  document.getElementbyId('demo').innerHTML = mycar.show();
 
+  "extends" keyword inherits all methods from another class 
+  "super" method calls parent's constructor function
+  objects using super inherit a function within a class
+
+________________________________
+
+OBJECT ORIENTED PROGRAMMING PRINCIPLES
+
+- OOP helps developers mimic relationship between objects in real world
+
+- OOP helps developers reason about relationships between objects in software
+
+- OOP :
+  allows you to write modular code
+  makes code more flexible
+  makes code reusable
+
+- 4 fundamental OOP principles:
+  1. inheritance
+  2. encapsulation
+  3. abstraction
+  4. polymorphism
+
+- objects exist in a hierarchical structure; all objects derive from the object class
+
+- you can create objects with the Object.create() method
+
+  ex:
+    class Animal {/*class code here*/};
+    var myDog = Object.create(Animal);
+    console.log(Animal)
+
+- you can also create objects with the "new" keyword
+
+  ex:
+    class Animal {/*class code here*/};
+    var myDog = new Animal();
+    console.log(Animal)
+
+- inheritance:
+  there is a base class of a thing
+  there is one or more sub-classes of things that inherit the properties of the base class
+  base class is also referred to as super-class
+  there can be sub-sub-classes, which inherit from a sub-class
+
+  ex:
+    class Animal {/*class code here*/};
+    class Bird extends Animal {/*class code here*/};
+    class Eagle extends Bird {/*class code here*/}
+
+- encapsulation:
+  the process of making a code implementation hidden from other users
+  other users can use code without knowing how code works
+
+  ex:
+    "abc".toUpperCase();
+
+- abstraction:
+  writing code in a way that makes it more generalized
+  extracting the concepts of what you're trying to do, rather than dealing with a specific manifestation of that concept
+
+- polymorphism:
+  when the same function produces different results based on its context
+    ex:
+      
+      ringing a bell on a bicycle vs. ringing a bell on a bike:
+        const bicycle = {
+          bell: function() {
+            return "Ring, ring! Watch out, please!"
+          }
+        }
+         const door = {
+          bell: function() {
+            return "Ring, ring! Come here, please!"
+          }
+        }
+
+      accessing the bell() method on the bicycle and door objects
+        bicycle.bell(); // "...Watch out, please!"
+        door.bell(); // "...Come here, please!"
+
+        the bell function is polymorphic
+
+      the "thing" keyword
+        function ringTheBell(thing) }
+          console.log(thing.bell())
+        }
+
+        ringTheBell(bicycle); // "...Watch out, please!"  
+        ringTheBell(door); // "...Come here, please!"  
+
+________________________________
+
+CONSTRUCTORS
+
+- native objects: JavaScript's built-in objects 
+
+- constructors allow us to build instances of native objects
+
+- constructors must be capitalized
+
+  ex : creating a new instance of the Date object
+    new Date();
+    //outputs datetime
+
+- certain objects come with the constructor function
+  for ex, running new Math() throws an Uncaught TypeError 
+  the Math object is a static object whose properties can be accessed directly from Math() object
+
+  ex:
+    function Icecream(flavor) {
+      this.flavor = flavor;
+      this.meltIt = function() {
+        console.log(`The ${this.flavor} icecream has melted`);
+      }
+    }
+
+    let kiwiIceCream = new Icecream('kiwi');
+    let appleIcecream = new Icecream('apple');
+    kiwiIcecream;
+    appleIcecream;
+
+- string literal vs. string object
+
+  let pear = 'pear';
+  pear; // --> 'pear'
+
+  vs.
+
+  let apple = new String('apple');
+  apple; // -->String {'apple'}
+
+  the string literal, or primitive value will be more performant than the string object
+  if you compare objects they will always return false because the space in memory which they occupy is unique
+    new String('apple') === new String('apple') //--> false
+
+- when constructing plain, regular objects, don't use constructors, use literal syntax: {}
+
+- RegExp objects: regular expression objects
+  used to pattern-match strings using regular expressions
+  built using "new RegExp" code
+  instead of using RegExp, use a pattern literal
+
+    ex:
+      "abcd".match(/d/); 
+      //['d', index: 3, input: 'abcd', groups: undefined]
+
+  avoid constructors with native objects like arrays, functions, and regexp
 
 

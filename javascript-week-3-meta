@@ -459,4 +459,70 @@ CONSTRUCTORS
 
   avoid constructors with native objects like arrays, functions, and regexp
 
+________________________________
 
+INHERITANCE
+
+- the inheritance model revolves around the prototype
+
+- prototype: an original model from which other forms are developed
+  can hold properties shared by multiple other objects
+
+  ex:
+  
+    var bird = {
+      hasWings: true,
+      canFly: true,
+      hasFeathers: true
+    }
+
+- create new objects from this prototype using object.create function
+
+  ex:
+
+    var eagle1 = Object.create(bird);
+    console.log('eagle1: ' , eagle1);
+    //output: eage1: {}
+    //an empty object is logged to the console
+
+    //checking inheritance of bird properties to eagle1
+    console.log('eagle1 has wings:", eagle1.hasWings);
+    console.log('eagle1 can fly:", eagle1.canFly);
+    console.log('eagle1 has feathers:", eagle1.hasFeathers);
+
+    /*output:
+    eagle1 has wings: true
+    eagle1 can fly: true
+    eagel1 has feathers: true*/
+
+
+  ex:
+
+    var eagle2 = Object.create(bird);
+    console.log('eagle2 has wings:', eagle2.hasWings)
+    //output: eagle2 has wings: true
+
+  ex:
+    
+    //overriding inherited properties from prototype
+    var penguin1 = Object.create(bird);
+    penguin1.canFly = false;
+    console.log ('penguin1 has feathers:', penguin1.hasFeathers);
+    console.log('penguin1 can fly:', penguin1.canFly);
+    /*output: penguin1 has feathers: true;
+    penguin1 can fly: false*/
+
+- you can build inheritance using object.create method
+
+- but using classes rather than object.create method works better in complex scenarios
+
+
+
+
+
+
+
+
+
+
+    

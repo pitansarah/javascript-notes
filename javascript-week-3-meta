@@ -314,6 +314,20 @@ CLASSES
   "super" method calls parent's constructor function
   objects using super inherit a function within a class
 
+- use the prototype keyword to add new properties and methods to objects after construction
+
+  function MakeCar (brand, mod) {
+      this.model
+      this.brand
+  }
+  
+  //adding a new property
+  MakeCar.prototype.color = 'red';
+
+  //adding a new method
+  MakeCar.prototype.beep = function() {
+    console.log('Beep, beep!');
+  }
 ________________________________
 
 OBJECT ORIENTED PROGRAMMING PRINCIPLES
@@ -516,12 +530,86 @@ INHERITANCE
 
 - but using classes rather than object.create method works better in complex scenarios
 
+________________________________
 
+CREATING CLASSES
 
+- inheritance in JS is based around the prototype object
 
+- all objects built from prototype share same functionality
 
+- the class keyword creates objects that inherit from prototypes
 
+- syntax:
+  Class classname {
+    constructor(parameter, parameter) {
+      this.property = ...;
+      this.property = ...;
+      this.property = ...;
+    }
+  }
 
+  ex:
+
+    class Train {
+      constructor (color, lightsOn) {
+        this.color = color;
+        this.lightsOn = lightsOn;
+      }
+    }
+
+    var myFirstTrain = new Train('red', false);
+    console.log(myFirstTrain);
+    //output: Train {color: 'red', lightsOn: false}
+
+- you can add methods to classes, all methods get added to prototype
+
+    class Train {
+      lightsStatus () {
+        console.log('Lights on?', this.lightsOn)
+      }
+    getSelf() {
+      console.log(this);
+      }
+    getPrototype() {
+      var proto = Object.getPrototypeOf(this);
+      console.log(proto);
+    }
+    }
+
+- getSelf() prints out the properties on he object instance it is called on
+- getPrototype console logs the prototype of the object instance of the Train class
+
+    var train4 = new Train('red', false);
+    train4.toggleLights(); //undefined
+    train4.getSelf(); //Train {color: 'red', lightsOn: true}
+    train4.getPrototype; //constructor: f, toggleLights: f, lightsStatus:f, getSelf: f, getPrototype: f}
+
+- implementing polymorphism using classes in JavaScript
+- toggleLights method behaves differently on Train and HighSpeedTrain
+
+  class HighSpeedTrain extends Train {
+    constructor (passengers, highSpeedOn, color, lightsOn) {
+      super(color, lightsOn);
+      this.passengers = passengers;
+      this.highSpeedOn = highSpeedOn;
+    }
+    toggleHighSpeed () {
+      this.highSpeedOn = !this.highSpeedOn;
+      console.log('High speed status:', this.highSpeedOn);
+    }
+    toggleLights() {
+      super.toggleLights();
+      super.lightsStatus();
+      console.log('Lights are 100% operational.');
+    }
+  }
+- toggleLights() method has been updated to console log a message
+- super defines what the subclass inherits from its super-class
+
+  var highSpeed1 = new HighSpeedTrain (200, false, 'green', false);
+
+- a class can be used as another class constructor property
 
 
 

@@ -767,67 +767,99 @@ https://www.youtube.com/watch?v=ZfQFUJhPqMM&t=229s
 
     find more than first match: use the /g flag, which makes every occurence of a search pattern
 
-    let testStr = "Repeat, repeat, Repeat";
-    let ourRegex = /Repeat/ig;
-    testStr.match(ourRegex);
-    //output : ["Repeat, repeat, Repeat"]
+      let testStr = "Repeat, repeat, Repeat";
+      let ourRegex = /Repeat/ig;
+      testStr.match(ourRegex);
+      //output : ["Repeat, repeat, Repeat"]
 
     match anything with wildcard period (.)
 
-    let humStr = "I'll hum a song";
-    let hugStr = "Bear hug";
-    let huRegex = /hu./
-    humStr.match(huRegex); // returns ["hum"]
-    hugStr.match(huRegex); // returns ["hug"]
+      let humStr = "I'll hum a song";
+      let hugStr = "Bear hug";
+      let huRegex = /hu./
+      humStr.match(huRegex); // returns ["hum"]
+      hugStr.match(huRegex); // returns ["hug"]
 
     match a single character with multiple possibilities
 
-    let bgRegex = /b[aiu]g/;
-    let quoteSample = 'Beware of bugs in the code.'
-    quoteSample.match(bgRegex);
-    //output: ['bug']
+      let bgRegex = /b[aiu]g/;
+      let quoteSample = 'Beware of bugs in the code.'
+      quoteSample.match(bgRegex);
+      //output: ['bug']
 
     match a range of letters
 
-    let quoteSample = "The quick brown fox jumps over the lazy dog."
-    let alphabetRegex = /[a-z]/ig;
-    let result = quoteSample.match(alphabetRegex);
-    console.log(result);
-    //output: every letter in sentence, one character at a time
+      let quoteSample = "The quick brown fox jumps over the lazy dog."
+      let alphabetRegex = /[a-z]/ig;
+      let result = quoteSample.match(alphabetRegex);
+      console.log(result);
+      //output: every letter in sentence, one character at a time
 
     match numbers and letters of the alphabet
     
-    let quoteSample = 'Blueberry 3.14s are delicious.';
-    let myRegex = /[2-6h-s]ig/; //regex for 2 through 6 and letters h through s
-    let result = quoteSample.match(myRegex);
-    //output : every letter within specified range
+      let quoteSample = 'Blueberry 3.14s are delicious.';
+      let myRegex = /[2-6h-s]ig/; //regex for 2 through 6 and letters h through s
+      let result = quoteSample.match(myRegex);
+      //output : every letter within specified range
 
-    negated character sets: matching everything except a specified character set
+    negated character sets [^]: matching everything except a specified character set
 
-    let quoteSample = "3 blind mice.";
-    let myRegex = /[^0-9aeiou]/ig
-    let result = quoteSample.match(myRegex);
-    console.log(result):
-    //output: all letters besides aeiou, no numbers
+      let quoteSample = "3 blind mice.";
+      let myRegex = /[^0-9aeiou]/ig
+      let result = quoteSample.match(myRegex);
+      console.log(result):
+      //output: all letters besides aeiou, no numbers
 
     match characters that occur one or more times
 
-    let difficultSpelling = "Mississippi";
-    let myRegex = /s+/g; //+ sign matches additional occurences of s
-    let result = difficultSpelling.match(myRegex);
-    console.log(result);
-    //output: ["ss", "ss", "s"]
+      let difficultSpelling = "Mississippi";
+      let myRegex = /s+/g; //+ sign matches additional occurences of s
+      let result = difficultSpelling.match(myRegex);
+      console.log(result);
+      //output: ["ss", "ss", "s"]
 
     match characters that occur 0 or more times, using *
 
-    let soccerWord = "goooooooal!";
-    let gPhrase = "gut feeling";
-    let oPhrase = "over the moon";
-    let goRegex = /go*/
-    soccerWord.match(goRegex); //returns ["gooooooo"]
-    gPhrase.match(goRegex); //returns ["g"]
-    oPhrase.match(goRegex); //returns null
+      let soccerWord = "goooooooal!";
+      let gPhrase = "gut feeling";
+      let oPhrase = "over the moon";
+      let goRegex = /go*/
+      soccerWord.match(goRegex); //returns ["gooooooo"]
+      gPhrase.match(goRegex); //returns ["g"]
+      oPhrase.match(goRegex); //returns null
 
+    find characters with lazy and greedy matching
+    greedy match (default), * : finds the longest possible part of the string that fits the regex pattern
+    lazy match, *? : finds the smallest possible part of the string that fits the regex pattern
+
+      let string = "titanic";
+      let regex = /t[a-z]*i/;
+      string.match(regex); // returns ["titani"]
+  
+      let string = "titanic";
+      let regex = /t[a-z]*?i/;
+      string.match(regex); // returns ["ti"]
+  
+      let text = "<h1>Hello World</h1>";
+      let regex = /<.*>/;
+      text.match(regex); // returns ["<h1>Hello World</h1>"]
+  
+      let text = "<h1>Hello World</h1>";
+      let regex = /<.*?>/;
+      text.match(regex); // returns ["<h1>"]
+
+    plus operator, + finds multiple reoccurences of a character
+
+      let string = "Hello World";
+      let regex = /l+/;
+      string.match(regex); //output: ["ll"]
+
+    matching beginning string patterns  
+    ^ checks if a word begins with a pattern
+
+      let string = "Hey, hi, hello.";
+      regex = /^Hey/;
+      string.match(regex); //output: true
 
     
     

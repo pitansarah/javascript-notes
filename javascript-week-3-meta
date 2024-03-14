@@ -717,5 +717,138 @@ let leo = new Housecat;
 leo.makeSound(false); //'purr!'
 leo.makeSound(true); //'Purr. meow'
 
+________________________________
+
+REGULAR EXPRESSIONS
+
+found on w3:
+
+- reg exps can be used to perform all types of text search and text replace operations
+
+- syntax: /pattern/modifiers
+
+- the search method uses an expression to search for and returns the position of the match
+
+- the replace method returns a modified string where the pattern has been replaced
+
+  ex:
+    let string = 'Hello World';
+    string.search(/world/i); //search for word, case insensitive
+    //output: 6
+
+  ex:
+    let string = 'Hello World';
+    string.replace(/Universe/);
+    string;
+    //output: Hello Universe
+
+found on freeCodeCamp:
+https://www.youtube.com/watch?v=ZfQFUJhPqMM&t=229s
+
+- .test() : test to see if a string contains a regex
+    
+    let myString = 'Hello World';
+    let myRegEx = /Hello/;
+    let result = myRegEx.test(myString); // output: true
+
+    let waldoIsHiding = 'Waldo is hiding.';
+    let myRegEx = /Waldo/;
+    let result = myRegEx.test(waldoIsHiding); // output: true
+
+    let petString = 'James has a pet cat.'
+    let petRegex = /dog|cat|bird|fish/ // searches for dog or cat, etc.
+    let result = petRegex.test(petString); // output: true
+
+- .match(): extract matches in a string
+    
+    let extractStr = "Extract the word 'coding' from this string.";
+    let codingRegex = /coding/;
+    let result = extractStr.match(codingRegex); // output: ["coding"]
+
+    find more than first match: use the /g flag, which makes every occurence of a search pattern
+
+    let testStr = "Repeat, repeat, Repeat";
+    let ourRegex = /Repeat/ig;
+    testStr.match(ourRegex);
+    //output : ["Repeat, repeat, Repeat"]
+
+    match anything with wildcard period (.)
+
+    let humStr = "I'll hum a song";
+    let hugStr = "Bear hug";
+    let huRegex = /hu./
+    humStr.match(huRegex); // returns ["hum"]
+    hugStr.match(huRegex); // returns ["hug"]
+
+    match a single character with multiple possibilities
+
+    let bgRegex = /b[aiu]g/;
+    let quoteSample = 'Beware of bugs in the code.'
+    quoteSample.match(bgRegex);
+    //output: ['bug']
+
+    match a range of letters
+
+    let quoteSample = "The quick brown fox jumps over the lazy dog."
+    let alphabetRegex = /[a-z]/ig;
+    let result = quoteSample.match(alphabetRegex);
+    console.log(result);
+    //output: every letter in sentence, one character at a time
+
+    match numbers and letters of the alphabet
+    
+    let quoteSample = 'Blueberry 3.14s are delicious.';
+    let myRegex = /[2-6h-s]ig/; //regex for 2 through 6 and letters h through s
+    let result = quoteSample.match(myRegex);
+    //output : every letter within specified range
+
+    negated character sets: matching everything except a specified character set
+
+    let quoteSample = "3 blind mice.";
+    let myRegex = /[^0-9aeiou]/ig
+    let result = quoteSample.match(myRegex);
+    console.log(result):
+    //output: all letters besides aeiou, no numbers
+
+    match characters that occur one or more times
+
+    let difficultSpelling = "Mississippi";
+    let myRegex = /s+/g; //+ sign matches additional occurences of s
+    let result = difficultSpelling.match(myRegex);
+    console.log(result);
+    //output: ["ss", "ss", "s"]
+
+    match characters that occur 0 or more times, using *
+
+    let soccerWord = "goooooooal!";
+    let gPhrase = "gut feeling";
+    let oPhrase = "over the moon";
+    let goRegex = /go*/
+    soccerWord.match(goRegex); //returns ["gooooooo"]
+    gPhrase.match(goRegex); //returns ["g"]
+    oPhrase.match(goRegex); //returns null
 
 
+    
+    
+
+
+    
+
+
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  

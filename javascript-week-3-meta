@@ -612,5 +612,77 @@ CREATING CLASSES
 - a class can be used as another class constructor property
 
 
+________________________________
 
-    
+DESIGNING AN OO PROGRAM 
+
+
+
+class Animal {
+  constructor (color, energy) {
+    this.color = ???;
+    this.energy = ???;
+  }
+  isActive() {
+    //function code here, see Step 3
+  }
+  sleep() {
+    //function code here
+  }
+  getColor() {
+    //function code here, see Step 4
+  }
+}
+
+class Cat extends Animal {
+  constructor (color, energy, sound, canJumpHigh, canClimbTrees) {
+    super (color, energy);
+    this.sound = ???;
+    this.canJumpHigh = ???;
+    this.canClimbTrees = ???;
+  }
+  makeSound() {
+    //function code here
+  }
+}
+
+class Bird extends Animal {
+  constructor (color, energy, sound, canFly) {
+    super(color, energy);
+    this.sound = ???;
+    this.canFly = ???;
+  }
+  makeSound() {
+    //function code here
+  }
+}
+
+class Housecat extends Cat {
+  constructor (color, energy, sound, canJumpHigh, canClimbTrees, houseCatSound) {
+    super (color, energy, sound, canJumpHigh, canClimbTrees);
+    this.houseCatSound;
+  }
+  makeSound() {
+    //function code, see Step 7
+  }
+}
+
+class Tiger extends Cat {
+  constructor (color, energy, sound, canJumpHigh, canClimbTrees, tigerSound) {
+    super (color, energy, sound, canJumpHigh, canClimbTrees);
+    this.tigerSound;
+  }
+  makeSound() {
+    //function code, see Housecat's makeSound() function
+  }
+}
+
+class Parrot extends Bird {
+  constructor (color, energy, sound, canFly, canTalk) {
+    super(color, energy, sound, canFly);
+    this.canTalk 
+  }
+  makeSound() {
+    //function code, see Step 9
+  }
+}

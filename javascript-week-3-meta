@@ -1134,9 +1134,7 @@ TEMPLATE LTIERALS EXAMPLES
           console.log (`${1 + 1 + 1 + 1 + 1} stars!`)
           //result: 5 stars!
 
-
-    
-
+  
 
 
 

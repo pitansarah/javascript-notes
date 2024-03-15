@@ -861,17 +861,88 @@ https://www.youtube.com/watch?v=ZfQFUJhPqMM&t=229s
       regex = /^Hey/;
       string.match(regex); //output: true
 
-    
-    
+ ________________________________  
+
+DESTRUCTURING ARRAYS AND OBJECTS
+
+- destructuring : 
+    extracting values from arrays or properties from objects into distinct variables (MDN)
+
+  freeCodeCamp:
+  https://www.youtube.com/watch?v=-vR3a11Wzt0
+
+  ex :
+  (old way of destructuring)
+
+    var voxel = {x: 3.6,  y: 7.4, z: 6.54}
+    var x = voxel.x;
+    var y = voxel.y;
+    var z = voxel.z
+
+  (current way of destructuring)
+  assign destructured variables from objects
+
+    const {x, y, z} = voxel;
+    console.log(x); // result: 3.6
+
+    const {x : a, y : b, z : c} = voxel;
+    console.log(b); // result: 7.4
+
+  assign destructured variables from nested objects
+
+    const nest = {
+      start: {x: 5, y: 6},
+      end: {x: 6, y: -9}
+    }
+
+    const {start: {x: startX, y: StartY}} = a
+    console.log(startX); // result: 5
+      
+  assign destructured variables from arrays
+
+    const [q, r] = [1, 2, 3, 4, 5];
+    console.log(q, r); // result: 1 2 
+    console.log(q,,,r); // result: 1 4
+
+  use the rest operator to reassign destructured array elements
+
+    const [q, r, ...rest] = [1, 2, 3, 4, 5];
+    console.log(q,r); // result: 1 2 
+    console.log(rest); // result [3 4 5]
 
 
-    
+(you can pass an object as a function's parameters using destructuring)
+
+________________________________
 
 
-    
-    
-  
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 

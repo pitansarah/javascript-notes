@@ -598,6 +598,7 @@ FOR LOOP
   specifies what code should do once exit condition is met
 
             ex : 
+           
             for (var i = 1; i <= 3; i++) {
               console.log(i);
             }
@@ -651,6 +652,8 @@ WHILE LOOP
   when this expression becomes false, loop stops
 
             ex : 
+
+            var i = 5;
             while (counter > 0) {
               console.log(counter);
               counter = counter - 1;
@@ -659,6 +662,7 @@ WHILE LOOP
 
                         OR
 
+            var i = 5;
             while (i > 0) {
             console.log(i);
             i--;

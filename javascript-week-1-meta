@@ -556,7 +556,7 @@ LOOPING CONSTRUCTS
 - for loop : 
             
             syntax:
-            for (initialization; condition; afterthought) {
+            for (initialization; condition; increment) {
             statement    
             }
 

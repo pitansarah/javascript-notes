@@ -915,9 +915,227 @@ DESTRUCTURING ARRAYS AND OBJECTS
 
 ________________________________
 
+FOR OF LOOPS AND OBJECTS  
+
+- because objects are not iterable, a for of loop cannot work directly on an object
+
+    const car = {
+      speed: 100,
+      color: 'blue'
+    }
+
+    for(prop of car) {
+      console.log(prop)
+    }
+
+    //result: Uncaught TypeError: car is not iterable
+
+- arrays are iterable, so for of loops will work directly on them
+
+    const colors = ['red', 'orange', 'yellow']
+    for (var color of colors) {
+      console.log(color);
+    }
+
+    /*output: 
+    red
+    orange
+    yellow */
+
+- a for of loop can be run on arrays to loop over objects
+
+- object.keys()method
+
+    const car2 = {
+      speed: 200,
+      color: 'red'
+    }
+    console.log(Object.keys(car2)); 
+    // result: ['speed', 'color']
+    returns the keys to the properties of car2
+
+- object.values()method
+
+    const car 3 = {
+      speed: 300,
+      color: 'yellow'
+    }
+    console.log(Object.values(car3)); 
+    //result : [300, 'yellow']
+    returns the values of the properties of car2
 
 
+- object.entries ()method
 
+    const car4 = {
+        speed: 400,
+        color: 'magenta'
+    }
+    console.log(Object.entries(car4));
+    //[ ['speed', 400], ['color', 'magenta'] ]
+    returns the keys and values of the properties of car2
+
+- loop over an object's own property keys and values
+
+    syntax: 
+    for (const key of Object.keys()) {
+      //code here
+    }
+    (the keys and values of an object don't change, so use const)
+
+    ex:
+
+      var clothingItem = {
+          price: 50,
+          color: 'beige',
+          material: 'cotton',
+          season: 'autumn'
+      }
+      
+      for( const key of Object.keys(clothingItem) ) {
+          console.log(key, ":", clothingItem[key])
+      }
+- when looping an object created off of a prototype the for in loop will loop through 
+  the prototypes properties, not the created object's values; use a for of loop instead
+
+  ex:
+    const car = {
+      engine: true,
+      steering: true,
+      speed: 'slow'
+    }
+    const SportsCar = Object.create(car);
+    sportsCar.speed = 'fast';
+    console.log('The sportsCar object: ', sportsCar);
+
+  using a for-in loop:
+
+    for (prop in SportsCar) {
+        console.log(prop);
+      }
+  
+      /* result:
+      speed
+      engine
+      steering (these are the prototype keys) */
+
+    using a for-of loop with Object.keys
+
+      for (prop of Object.keys(SportsCar)) {
+        console.log(prop + ": " + sportsCar[prop]); //console.log (key: value)
+      }
+  
+      //result: speed: fast
+
+    
+
+________________________________
+
+FOR IN / FOR OF : freeCodeCamp / w3
+
+https://www.youtube.com/watch?v=a3KHBqH7njs&list=PLWKjhJtqVAbk2qRZtWSzCIN38JC_NdhW5&index=21
+
+- for in loops through property keys
+  
+  syntax:
+
+    for (key in object) {
+      //code block to be executed
+    }
+
+ ex: 
+
+    let person = {fname: 'Beau', lname: 'Carnes', arms: 2};
+    
+    let text = ' ';
+    for (let x in person) { // getting keys
+      text += person[x] // getting values
+      console.log(x); // console logging values
+    }
+    console.log(text); // console logging text which is keys
+
+  ex:
+  
+    let arr = [3, 5, 7];
+    arr.foo = 'hello';
+
+    for (let i in arr) {
+      console.log(i);
+    };
+
+    /* result: '0'
+    '1'
+    '2'
+    'foo' (key for arr property) */
+
+    (for in loops loop through keys, not values)
+    using fo in loops for arrays is discouraged because order of keys and values can be unexpected
+
+
+- for of loops through property values
+    
+  syntax:
+
+    for (variable of object) {
+      statement
+    }
+
+    let arr = [3, 5, 7];
+    arr.foo = 'hello';
+
+    for (let i of arr) {
+      console.log(i);
+    };
+
+    /* result: 3
+    5
+    7 */
+
+    (for in loops loop through values, not keys)
+
+
+________________________________
+
+TEMPLATE LTIERALS EXAMPLES
+
+- before ES6 only single and double quotes could be used as delimiters
+
+- with ES6, backticks were introduced as delimiters
+
+- objects enclosed in backtick delimiters are template strings or template literals
+
+- with template literals an expression can be embedded in a placeholder, represented by ${}
+
+- whats outside curly brackets is treated as a string
+
+- differences between a template string and a regular string
+
+    template strings allows you to rewrite variables more easily
+
+      ex:
+
+        let greet = "Hello";
+        let place = "World";
+        console.log(`${greet} ${place}!');
+        //result: Hello World!
+
+    template strings can span multiple lines, unlike string literals
+
+      ex:
+
+        `Hello,
+        World
+        ! `
+
+    expressions inside template literals can be evaluated
+
+      ex:
+
+          console.log (`${1 + 1 + 1 + 1 + 1} stars!`)
+          //result: 5 stars!
+
+
+    
 
 
 

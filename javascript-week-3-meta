@@ -331,6 +331,8 @@ CLASSES
 ________________________________
 
 OBJECT ORIENTED PROGRAMMING PRINCIPLES
+see: Programming with Mosh 
+https://www.youtube.com/watch?v=PFmuCDHHpwk&list=LL&index=1&t=234s
 
 - OOP helps developers mimic relationship between objects in real world
 
@@ -375,18 +377,19 @@ OBJECT ORIENTED PROGRAMMING PRINCIPLES
     class Eagle extends Bird {/*class code here*/}
 
 - encapsulation:
-  the process of making a code implementation hidden from other users
-  other users can use code without knowing how code works
+  the parameters of an object are built into the properties of its corresponding object so functions 
+  don't need as many parameters; all of the code concerning data is grouped into objects
 
   ex:
     "abc".toUpperCase();
 
-- abstraction:
-  writing code in a way that makes it more generalized
-  extracting the concepts of what you're trying to do, rather than dealing with a specific manifestation of that concept
+- abstraction
+  the process of making a code implementation hidden from other users for easier use 
 
 - polymorphism:
-  when the same function produces different results based on its context
+
+  when the same function from a class produces different results in their subclasses
+
     ex:
       
       ringing a bell on a bicycle vs. ringing a bell on a bike:

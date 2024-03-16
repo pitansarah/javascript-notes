@@ -5,7 +5,7 @@ INTRODUCTION TO FUNCTIONAL PROGRAMMING
   object-oriented programming (OOP)
 
 - in functional programming:
-  there is a clear delineating between data and functions
+  there is a clear delineation between data and functions
 
 - in object-oriented programming
   you combine both data and functions into objects
@@ -139,8 +139,8 @@ FP, important concepts:
     pass into other functions like a string or number,
     save in a variable
     return from other functions
-    
-  are values just as strings or numbers
+
+  functions that can be treated like any variable
 
   ex: 
     function addTwoNums(a, b) {
@@ -191,7 +191,7 @@ FP, important concepts:
     calling Math.random()
 
 - impure functions
-  use non-local variables for computing is output
+  use non-local variables for computing its output
   creates a side effect by modifying another variable
 
 ________________________________

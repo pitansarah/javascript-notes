@@ -942,9 +942,12 @@ FOR OF LOOPS AND OBJECTS
     orange
     yellow */
 
-- a for of loop can be run on arrays to loop over objects
+- a for of loop can be run to loop over object keys using object.keys()
+- a for of loop can be run to loop over object keys using object.values()
+- a for of loop can be run to loop over object keys and values using object.entries()
+- but a for in loop is the better way to do this
 
-- object.keys()method
+- using object.keys() 
 
     const car2 = {
       speed: 200,
@@ -954,7 +957,7 @@ FOR OF LOOPS AND OBJECTS
     // result: ['speed', 'color']
     returns the keys to the properties of car2
 
-- object.values()method
+- using object.values()
 
     const car 3 = {
       speed: 300,
@@ -965,7 +968,7 @@ FOR OF LOOPS AND OBJECTS
     returns the values of the properties of car2
 
 
-- object.entries ()method
+- using object.entries()
 
     const car4 = {
         speed: 400,
@@ -978,8 +981,8 @@ FOR OF LOOPS AND OBJECTS
 - loop over an object's own property keys and values
 
     syntax: 
-    for (const key of Object.keys()) {
-      //code here
+    for (const key of Object.keys(parameter)) {
+      console.log(key, parameter[key]);
     }
     (the keys and values of an object don't change, so use const)
 
@@ -1027,7 +1030,6 @@ FOR OF LOOPS AND OBJECTS
   
       //result: speed: fast
 
-    
 
 ________________________________
 
@@ -1069,7 +1071,7 @@ https://www.youtube.com/watch?v=a3KHBqH7njs&list=PLWKjhJtqVAbk2qRZtWSzCIN38JC_Nd
     'foo' (key for arr property) */
 
     (for in loops loop through keys, not values)
-    using fo in loops for arrays is discouraged because order of keys and values can be unexpected
+    using for in loops for arrays is discouraged because order of keys and values can be unexpected
 
 
 - for of loops through property values
@@ -1091,7 +1093,7 @@ https://www.youtube.com/watch?v=a3KHBqH7njs&list=PLWKjhJtqVAbk2qRZtWSzCIN38JC_Nd
     5
     7 */
 
-    (for in loops loop through values, not keys)
+    (for in loops loop through values of arrays, not objects)
 
 
 ________________________________
@@ -1134,9 +1136,16 @@ TEMPLATE LTIERALS EXAMPLES
           console.log (`${1 + 1 + 1 + 1 + 1} stars!`)
           //result: 5 stars!
 
-  
+  ________________________________
 
 
+for (variable in object) {
+  statements
+}
+
+for (variable of object) {
+  statements
+}
 
 
 

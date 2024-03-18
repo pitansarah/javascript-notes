@@ -187,7 +187,7 @@ DATA TYPES
 
 - symbol:
   a data type used as a unique identifier
-  ex: $
+  a unique and immutable data type that may be used as a key for objects
 
 _____________________________________________________________________
 
@@ -479,7 +479,7 @@ CONDITIONAL EXAMPLES
 - flow control statements: if else and switch; they control the flow of execution of your code
   so that some code is skipped while other code is executed
 
-- if else is best for a binary choice in the condition
+- if and else if is best for a binary choice in the condition
 
 - if, else if, and else can be used with a smaller number of possible outcomes you need to check
 
@@ -587,6 +587,7 @@ _____________________________________________________________________
 FOR LOOP
 
 - for loops automate code repetition
+- loops through a block of code a number of times
 
 - declaration, consisting of counter, named i for iterator :
   the counter's start value must be assigned

@@ -1143,20 +1143,137 @@ TEMPLATE LTIERALS EXAMPLES
 
   ________________________________
 
+DATA STRUCTURES
 
-for (variable in object) {
-  statements
-}
+- when solving problems in JS, we need to consider how to represent data we're working with
+  how we structure data impacts how we solve a tasks involving the data
+  each data structure comes with built-in functionality that makes it easier to perform certain tasks
 
-for (variable of object) {
-  statements
-}
+- a data structure is a way to organize data
+- common data structures:
+  objects
+  arrays
+  maps
+  sets
+
+- consider the following problem: you need to get the average grade from a set of grades
+
+  you could represent the grade data as a string
+  const allTests = "70, 80, 90, 58, 80, 85"
+  but you would need to convert this string to a number before using them
+
+  you could represent the data as several numbers
+  const test 1 = 70; 
+  const test 2 = 80; 
+  const test 2 = 90; 
+  etc.
+  but typing all of this info out is inefficient
+
+  you could put all of the grades in an array
+  const grades = [70, 80, 90, 58, 80, 85]
+
+- objects: an unaltered, non iterable collection of key-value pairs (strings and symbols)
+
+- array: an ordered, iterable collection of data;
+  arrays are useful for accessing values under an index 
+  its common to use loops to access and edit array data
+
+    for (i = 0; i < grades.length; i++) {
+      return gradesSum += grades[i]; 
+    }
+    console.log(gradesSum / grades.length);
+    //85
+
+- map : iterable, consists of key-value pairs (any value can be used as a key), 
+
+- set : a collection of unique values.
+  Each value can only occur once in a Set.
+  A Set can hold any value of any data type.
+  use add() and delete() methods to insert and remove items from set, last in first out (LIFO)
+
+  the set constructor:
+  
+    new Set();
+
+  sets can be used to quickly filter an array from new values
+
+    const repetitiveFruits = ['apple','pear','apple','pear','plum', 'apple'];
+    const uniqueFruits = new Set(repetitiveFruits);
+    console.log(uniqueFruits);
+    //output: {'apple', 'pear', 'plum'}
 
 
 
 
+________________________________
 
+DATA STRUCTURES EXAMPLES
 
+- forEach() method:
+  allows you to loop over each value in an array
+
+    ex:
+
+    const fruits = ['kiwi','mango','apple','pear'];
+    function appendIndex(fruit, index) {
+        console.log(`${index}. ${fruit}`)
+    }
+    fruits.forEach(appendIndex);
+
+    ex:
+    
+    const veggies = ['onion', 'garlic', 'potato'];
+    veggies.forEach( function(veggie, index) {
+        console.log(`${index}. ${veggie}`);
+    });
+
+- filter() method:
+  filters your arrays based on a specific test
+
+    ex:
+    
+    const nums = [0,10,20,30,40,50];
+    nums.filter( function(num) {
+        return num > 20;
+    })
+    //[30,40,50]
+
+- map() method:
+  outputs a new array based on the original array being processed by a function
+
+    ex:
+    
+    [0,10,20,30,40,50].map( function(num) {
+        return num / 10
+    })
+    //[0,1,2,3,4,5]
+
+- working with maps in JS
+
+- the map constructor:
+
+    new Map();
+
+- maps don't have inheritance or prototypes
+
+    ex:
+
+    let bestBoxers = new Map();
+    bestBoxers.set(1, "The Champion");
+    bestBoxers.set(2, "The Runner-up");
+    bestBoxers.set(3, "The third place");
+    
+    console.log(bestBoxers)
+    //Map(3) {1 => 'The Champion', 2 => 'The Runner-up', 3 => 'The third place'}
+
+- get() method
+  use to get a specific value in a map
+
+    ex:
+    
+    bestBoxers.get(1); // 'The Champion'
+
+- working with sets
 
 
 

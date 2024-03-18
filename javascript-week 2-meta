@@ -179,7 +179,7 @@ sort()
   - sorts strings in an array alphabetically and numerically (with some modifications)
   
     ex (numeric sorting):
-    include a compare function (not necessary with alphabetic sorting)
+    when sorting numbers, include a compare function (not necessary with alphabetic sorting)
 
       let arr = [6, 2, 1, 4, 5, 3];
       arr.sort(function(a, b){return a - b});
@@ -201,9 +201,8 @@ rounding methods
 
   - Math.ceil(): rounds up to closest integer
   - Math.floor(): rounds down to closest integer
-  - Math.round(): rounds up to closest integer if the decimal is .5 or above
-    otherwise rounds down to closest integer
-  - Math.trunc(): trims the decimal, leaving only the integer
+  - Math.round(): rounds a number to the nearest integer
+  - Math.trunc(): trims the decimal, leaving only the integer; does not round numbers
 
 arithmetic and calculus methods
 
@@ -459,7 +458,7 @@ TYPE OF
 
     var test = function () {
     };
-    console.log(test)l
+    console.log(test);
     //function
 
 - can return the following results:

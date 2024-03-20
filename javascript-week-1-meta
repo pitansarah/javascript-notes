@@ -726,7 +726,7 @@ exercise : you are making cards for children letter blocks A through G to be pre
             }
 
 %c : converts an argument as css
-- = 0 : i starts off at A or 0 
+i = 0 : i starts off at A or 0 
 i < cubes.length : cubes.length is the total length of the string var cubes, which is ABCDEFG; i must be less than the total length of the string for code to run
 cubes[i] : targets a specific letter in the ABCDEFG string; i = 0 is A
 

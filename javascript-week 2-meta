@@ -24,7 +24,8 @@ FUNCTIONS
     var c = a + b;  
     console.log(c);
     }
-    addTwoNums(2,2); //2 and 2 are arguments
+    addTwoNums(2,2); //4 
+    //2 and 2 are the function's arguments
 
 _________________________________________________
 
